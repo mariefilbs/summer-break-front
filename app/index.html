@@ -6,13 +6,13 @@
     <title>Summer Break!</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://use.fontawesome.com/3703b6b40b.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum|Lobster" rel="stylesheet">
   </head>
   <body ng-app='app'>
   <!----navigation bar ----------------------------------------------------->
   <nav class="nav">
   <div class="nav-left">
-    <a class="nav-item">Summer Break</a>
+    <a class="nav-item logo"><span class="summer">Summer</span> <span class="break">Break</span></a>
 
   </div>
 
@@ -41,9 +41,15 @@
   </div>
 </nav>
   <!------------------------------------------------------------------------>
-    <div class="landing-container">
-      <p>How will you break the mold?</p>
+    <div class="landing-container animate-me">
+      <div class="landing-logo">
+       <div class="summer landing">Summer</div>
+       <div class="break landing">Break</div>
+       <i class="fa fa-angle-double-down arrow animated bounce" aria-hidden="true"></i>
+
+      </div>
     </div>
+    <script src="https://use.fontawesome.com/3703b6b40b.js"></script>
     <script src="js/bundle.js"></script>
   </body>
 </html>
