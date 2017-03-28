@@ -5,11 +5,15 @@ function UserController ($scope, $http, $cookies, $state, SERVER, $rootScope) {
 
   $scope.register = (user) => {
     console.log(user);
-    $http.post(`${SERVER}/users`, user).then(resp => {
-      $state.go('root.login');
-    }).catch(error => {
-       console.log(error);
-    });
+    $http.post(`${SERVER}/users`, user)
+      .then($http.post(`${SERVER}/login`, user)).then(resp => {
+        $rootScope.loggedIn = true;
+        $cookies.put('access-token', resp.data.token);
+        $state.go('root.home');
+      })
+      .catch(error => {
+         console.log(error);
+      });
   }
 
   $scope.login = (user) => {
@@ -18,6 +22,7 @@ function UserController ($scope, $http, $cookies, $state, SERVER, $rootScope) {
       $rootScope.loggedIn = true;
       $cookies.put('access-token', resp.data.token);
       $state.go('root.home');
+
     }).catch(error => {
         console.log(error);
     });
