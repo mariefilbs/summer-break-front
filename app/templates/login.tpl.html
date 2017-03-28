@@ -3,67 +3,23 @@
 <div class="modal-content">
   <div class="login-page">
   <div class="form">
-    <form class="register-form">
-      <input type="text" placeholder="First Name"/>
-      <input type="text" placeholder="Last Name"/>
-      <input type="text" placeholder="email address"/>
-      <input type="password" placeholder="password"/>
+    <form class="register-form" ng-submit="register(user)">
+      <input type="text" placeholder="first name" ng-model="user.firstName"/>
+      <input type="text" placeholder="last lame" ng-model="user.lastName"/>
+      <input type="text" placeholder="email address" ng-model="user.email"/>
+      <input type="password" placeholder="password" ng-model="user.password"/>
+      <!-- <input type="text" placeholder="add a profile url" ng-model="user.profile_url" /> -->
       <button>create</button>
       <p class="message">Already registered? <a ng-click="switchForms()">Sign In</a></p>
     </form>
-    <form class="login-form">
-      <input type="text" placeholder="email"/>
-      <input type="password" placeholder="password"/>
+    <form class="login-form" ng-submit="login(signin)">
+      <input type="text" placeholder="email" ng-model="signin.email"/>
+      <input type="password" placeholder="password" ng-model="signin.password"/>
       <button>login</button>
       <p class="message">Not registered? <a ng-click="switchForms()">Create an account</a></p>
     </form>
   </div>
 </div>
-  <!-- <div class="column register">
-          <h4 class="register-title">Register:</h4>
-          <form ng-submit="addUser(user)">
-            <p class="control">
-              <input type="text" placeholder="First Name"
-                     ng-model="user.firstName" />
-            </p>
-            <p class="control">
-              <input type="text" placeholder="Last Name"
-                     ng-model="user.lastName" />
-            </p>
-
-            <p class="control">
-              <input type="text" placeholder="Email"
-                     ng-model="user.email" />
-            </p>
-            <p class="control">
-              <input type="text" placeholder="Password"
-                     ng-model="user.password" />
-            </p>
-            <p class="control">
-              <input type="text" placeholder="Add a Profile Picture"
-                     ng-model="user.profile_url" />
-            </p>
-            <p class="control">
-              <button class="button is-primary">Create account!</button>
-            </p>
-          </form>
-      </div>
-      <div class="column login">
-       <h4>Login:</h4>
-       <form ng-submit="login(signin)">
-        <p class="control">
-          <input type="text" placeholder="Email"
-                ng-model="signin.email" />
-        </p>
-        <p class="control">
-          <input type="password" placeholder="Password"
-                ng-model="signin.password" />
-        </p>
-        <p class="control">
-          <button class="button is-primary signin-button">Sign In</button>
-        </p>
-       </form>
-      </div> -->
 
       <button class="modal-close" ng-click="deactivate()"></button>
    </div>
