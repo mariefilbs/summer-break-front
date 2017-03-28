@@ -59,8 +59,8 @@ i.fa.fa-calendar:before {
 }
 
 .animate-me {
-  -webkit-animation: bgcolorchange 5s infinite; /* Chrome, Safari, Opera */
-  animation: 5s infinite bgcolorchange;
+  -webkit-animation: bgcolorchange 7s infinite; /* Chrome, Safari, Opera */
+  animation: 7s infinite bgcolorchange;
 }
 @keyframes bgcolorchange {
   0% {
@@ -172,4 +172,92 @@ h1 {
   0% {background-position: 0 0}
   0% {background-position: 100% -100%}
 }
-  //-------
+//-------
+//login modal
+.modal-close {
+    margin-top: 50px;
+}
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin-top: 125px;
+  margin-left: 130px;
+}
+
+.form {
+  position: relative;
+  background: #FFFFFF;
+  max-width: 360px;
+  padding: 45px;
+  text-align: center;
+}
+
+.form input {
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.form button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  max-width: 300px;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}

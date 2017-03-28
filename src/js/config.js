@@ -1,16 +1,21 @@
 function Config ($stateProvider, $urlRouterProvider) {
 
   $stateProvider
-   .state('home', {
+  .state('root', {
+    abstract: true,
+    templateUrl: 'templates/root.tpl.html',
+    controller: 'LayoutController'
+  })
+   .state('root.home', {
      url: '/home',
-     //templateUrl: '',
-     //controller: 'LayoutController'
+     templateUrl: 'templates/landing-page.tpl.html',
+     controller: 'LayoutController'
    })
-    // .state('login', {
-    //     url: '/users',
-    //     templateURL: 'templates/login.tpl.html',
-    //     controller: 'UserController'
-    // })
+    .state('root.login', {
+      url: '/users',
+      templateUrl: 'templates/login.tpl.html',
+      controller: 'UserController'
+    })
     .state('page-not-found', {
       url: '/not-found',
       template: `<h2>So sorry! Unable to find that URL.</h2>`

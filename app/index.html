@@ -9,80 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Lobster" rel="stylesheet">
   </head>
   <body ng-app='app'>
-  <!----navigation bar ----------------------------------------------------->
-  <nav class="nav">
-  <div class="nav-left">
-    <a class="nav-item logo"><span class="summer">Summer</span> <span class="break">Break</span></a>
 
-  </div>
-
-  <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
-  <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
-  <span class="nav-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </span>
-
-  <!-- This "nav-menu" is hidden on mobile -->
-  <!-- Add the modifier "is-active" to display it on mobile -->
-  <div class="nav-center nav-menu">
-    <a class="nav-item">Home</a>
-    <a class="nav-item">About</a>
-    <a class="nav-item">Add an Event</a>
-    <a class="nav-item">Events</a>
-  </div>
-  <div class="nav-right nav-menu"
-    <a class="nav-item"><i class="fa fa-calendar" aria-hidden="true"></i></a>
-
-    <span class="nav-item">
-      <a class="button" >
-        <span>Sign In/Register</span>
-      </a>
-    </span>
-  </div>
-</nav>
-  <!------------------------------------------------------------------------>
-  <!---landing page---------------------------------------------------------->
-    <div class="landing-container animate-me">
-      <div class="landing-logo">
-       <h1 class="summer landing" data-shadow='dang!'>Summer</h1>
-       <div class="break landing">Break</div>
-       <i class="fa fa-angle-double-down arrow animated bounce" aria-hidden="true"></i>
-      </div>
-    </div>
-  <!------------------------------------------------------------------------->
-  <!---sign in/login form---------------------------------------------------->
-  <div ng-controller="UserController">
-          <h4></h4>
-          <form ng-submit="addUser(user)">
-            <p class="control">
-              <input type="text" placeholder="First Name"
-                     ng-model="user.firstName" />
-            </p>
-            <p class="control">
-              <input type="text" placeholder="Last Name"
-                     ng-model="user.lastName" />
-            </p>
-
-            <p class="control">
-              <input type="text" placeholder="Email"
-                     ng-model="user.email" />
-            </p>
-            <p class="control">
-              <input type="text" placeholder="Password"
-                     ng-model="user.password" />
-            </p>
-            <p class="control">
-              <input type="text" placeholder="Add a Profile Picture"
-                     ng-model="user.profile_url" />
-            </p>
-            <p class="control">
-              <button class="button is-primary">Create account!</button>
-            </p>
-          </form>
-        </div>
-    <!----------------------------------------------------------------------->
+     <div class="main-content" ui-view></div>
     <script src="https://use.fontawesome.com/3703b6b40b.js"></script>
     <script src="js/bundle.js"></script>
   </body>
