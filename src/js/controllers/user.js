@@ -1,7 +1,8 @@
 import $ from 'jquery';
 
-function UserController ($scope, $http, $state, SERVER) {
+function UserController ($scope, $http, $cookies, $state, SERVER, $rootScope) {
   $scope.notifications = [];
+  console.log($cookies);
 
   $scope.removeMsg = (msg) => {
     var removed = $scope.notifications.filter(x => x != msg);
@@ -9,7 +10,8 @@ function UserController ($scope, $http, $state, SERVER) {
   }
 
   $scope.register = (user) => {
-    $http.post(`${SERVER}/register`, user).then(resp => {
+    console.log(user);
+    $http.post(`${SERVER}/users`, user).then(resp => {
       var message = `Created new user: ${resp.data.username}`;
       $scope.notifications.push(message);
     }).catch(error => {
@@ -18,7 +20,10 @@ function UserController ($scope, $http, $state, SERVER) {
   }
 
   $scope.login = (user) => {
+    console.log(user);
     $http.post(`${SERVER}/login`, user).then(resp => {
+      $rootScope.loggedIn = true;
+      $cookies.put('access-token', resp.data.token);
       $state.go('/home');
     }).catch(error => {
         console.log(error);
@@ -34,6 +39,6 @@ function UserController ($scope, $http, $state, SERVER) {
   };
 }
 
-UserController.$inject = ['$scope', '$http', '$state', 'SERVER'];
+UserController.$inject = ['$scope', '$http', '$cookies', '$state', 'SERVER', '$rootScope'];
 
 export default UserController;

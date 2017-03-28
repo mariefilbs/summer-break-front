@@ -7,6 +7,10 @@ function LayoutController ($scope, $rootScope, $state, $cookies, $http) {
     $state.go('root.home');
   };
 
+  $scope.moveDown = () => {
+    $state.go('root.home.about');
+  }
+
 
 }
 
