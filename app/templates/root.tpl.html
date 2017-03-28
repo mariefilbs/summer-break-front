@@ -18,15 +18,18 @@
 <div class="nav-center nav-menu">
   <a href="#!/home" class="nav-item">Home</a>
   <a href="#!/home/about" class="nav-item">About</a>
-  <!-- <a class="nav-item">Add an Event</a> -->
+  <a class="nav-item" ng-hide="!loggedIn">Add an Event</a>
   <a class="nav-item">Events</a>
 </div>
 <div class="nav-right nav-menu"
   <a class="nav-item"><i class="fa fa-calendar" aria-hidden="true"></i></a>
 
   <span class="nav-item">
-    <a href="#!/users" class="button" >
+    <a href="#!/users" class="button" ng-hide="loggedIn" >
       <span>Sign In/Register</span>
+    </a>
+    <a class="button" ng-show="loggedIn">
+      <span ng-click="signOut()">Sign Out</span>
     </a>
   </span>
 </div>

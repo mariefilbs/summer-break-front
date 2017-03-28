@@ -262,7 +262,13 @@ h1 {
   color: #EF3B3A;
 }
 
+.main-card-content {
+  display: flex;
+  justify-content: space-around;
+}
+
 .main-card {
+  align-items: center;
   width: 250px;
   margin: 40px auto;
   display: inline-block;
