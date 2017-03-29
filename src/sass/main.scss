@@ -11,7 +11,17 @@
 //   top: 0;
 // }
 
-.nav {
+.fix-nav {
+  //margin-top: 180px;
+
+  width: 100%;
+  font-family: 'Cuprum', sans-serif;
+  background-color: #85D3DF;
+  color: white;
+  //border: 1px solid black;
+}
+
+.trans-nav {
   //margin-top: 180px;
   position: absolute;
   width: 100%;
@@ -19,6 +29,7 @@
   background-color: transparent;
   color: white;
 }
+
 
 // .fixNav {
 //   background-color: white;
@@ -67,9 +78,6 @@ a.nav-item.logo {
   margin-top: 200px;
 }
 
-.fix-landing {
-
-}
 
 .landing-logo .break {
   margin-top: -70px;
@@ -310,8 +318,14 @@ h1 {
 // }
 
 //event css
-.events {
-  clear: both;
+// .events {
+//   clear: both;
+// }
+
+
+.list-event-page {
+  //clear: both;
+  margin-top: 150px;
 }
 
 .add-activity {

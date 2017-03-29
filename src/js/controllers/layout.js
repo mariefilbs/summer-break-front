@@ -6,12 +6,12 @@ function LayoutController ($scope, $rootScope, $state, $cookies, $http) {
     $rootScope.loggedIn = false;
     $cookies.remove('access-token');
     $http.defaults.headers.common['access-token'] = null;
-    $state.go('root.home');
+    $state.go('transparent.home');
   };
 
-  $scope.moveDown = () => {
-    $state.go('root.home.about');
-  }
+  // $scope.moveDown = () => {
+  //   $state.go('root.home.about');
+  // }
 
 // console.log( () => {return window.scrollY()} );
   // var mn = $('.nav');

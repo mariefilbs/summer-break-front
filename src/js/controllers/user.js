@@ -23,7 +23,7 @@ function UserController ($scope, $http, $cookies, $state, SERVER, $rootScope) {
     $http.post(`${SERVER}/login`, user).then(resp => {
       $rootScope.loggedIn = true;
       $cookies.put('access-token', resp.data.token);
-      $state.go('root.home');
+      $state.go('transparent.home');
 
     }).catch(error => {
     console.log(error);
@@ -31,7 +31,7 @@ function UserController ($scope, $http, $cookies, $state, SERVER, $rootScope) {
   }
 
   $scope.deactivate = () => {
-    $state.go('root.home');
+    $state.go('transparent.home');
   };
 
   $scope.switchForms = () => {

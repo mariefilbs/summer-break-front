@@ -2,7 +2,7 @@
 <div class="modal-background">
 <div class="modal-content">
   <div class="login-page">
-  <div class="form">
+  <div class="form" ng-hide="!loggedIn">
     <div class="add-activity">
     <form class="add event-form" ng-submit="">
       <input type="date" placeholder="date" ng-model="event.date"/>
