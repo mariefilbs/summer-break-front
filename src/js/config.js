@@ -21,6 +21,16 @@ function Config ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/main-content.tpl.html',
       controller: 'LayoutController'
     })
+    .state('root.addevent', {
+      url: '/addevent',
+      templateUrl: 'templates/addevent.tpl.html',
+      controller: 'EventController'  
+    })
+    .state('root.events', {
+      url: '/events',
+      templateUrl: 'templates/events.tpl.html',
+      controller: 'EventController'
+    })
     .state('page-not-found', {
       url: '/not-found',
       template: `<h2>So sorry! Unable to find that URL.</h2>`

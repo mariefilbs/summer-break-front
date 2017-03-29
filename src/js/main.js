@@ -6,10 +6,12 @@ import SERVER from './server';
 
 import UserController from './controllers/user';
 import LayoutController from './controllers/layout';
+import EventController from './controllers/events';
 
 angular
   .module('app', ['ui.router', 'ngCookies'])
   .config(Config)
   .constant('SERVER', SERVER)
   .controller('UserController', UserController)
-  .controller('LayoutController', LayoutController);
+  .controller('LayoutController', LayoutController)
+  .controller('EventController', EventController);

@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 function LayoutController ($scope, $rootScope, $state, $cookies, $http) {
 
   $scope.signOut = () => {
@@ -10,6 +12,19 @@ function LayoutController ($scope, $rootScope, $state, $cookies, $http) {
   $scope.moveDown = () => {
     $state.go('root.home.about');
   }
+
+// console.log( () => {return window.scrollY()} );
+  // var mn = $('.nav');
+  //    mns = 'main-nav-scrolled';
+  //    hdr = $('landing-container').height();
+  //
+  // $(window).scroll(function() {
+  //   if($(this).scrollTop() > 100) {
+  //     mn.addClass(mns);
+  //   } else {
+  //     mn.removeClass(mns);
+  //   }
+  // });
 
 
 }

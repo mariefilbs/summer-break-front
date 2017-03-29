@@ -9,19 +9,21 @@
       <input type="text" placeholder="email address" ng-model="user.email"/>
       <input type="password" placeholder="password" ng-model="user.password"/>
       <!-- <input type="text" placeholder="add a profile url" ng-model="user.profile_url" /> -->
-      <button ng-submit="login(signin)">create</button>
+      <button>create</button>
       <p class="message">Already registered? <a ng-click="switchForms()">Sign In</a></p>
     </form>
-    <!---new user notification--------->
-         <div ng-repeat="msg in notifications" class="pop-up-new-user notification is-primary">
-          <button ng-click="removeMsg(msg)"
-                class="delete"></button>
-                <p class="content">
-                {{ msg }}
-                </p>
-         </div>
+
     <!--------------------------------->
     <form class="login-form" ng-submit="login(signin)">
+      <!---new user notification--------->
+           <div ng-repeat="msg in notifications" class="pop-up-new-user notification is-primary">
+            <button ng-click="removeMsg(msg)"
+                  class="delete"></button>
+                  <p class="content">
+                  {{ msg }}
+                  </p>
+           </div>
+      <!---------------------------------->
       <input type="text" placeholder="email" ng-model="signin.email"/>
       <input type="password" placeholder="password" ng-model="signin.password"/>
       <button>login</button>
