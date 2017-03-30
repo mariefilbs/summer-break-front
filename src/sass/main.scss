@@ -306,8 +306,12 @@ h1 {
 }
 
 .main-card-content {
+  //display: flex;
+}
+
+.row-cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .main-card {
@@ -322,6 +326,13 @@ h1 {
 // }
 
 //event css
+.general-events {
+  border: 1px solid lightgrey;
+}
+.general-events-title {
+  font-size: 160%;
+}
+
 .event-title {
   //height: 50px;
   color: black;
@@ -332,7 +343,7 @@ h1 {
   //clear: both;
   margin-top: 125px;
   margin-left: 30px;
-  border: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
   border-radius: 3px;
   width: 900px;
   padding: 15px;
@@ -342,6 +353,18 @@ h1 {
 .add-activity {
   width: auto;
   display: inline-block;
+}
+
+.activity-website {
+  color: #2AA38E;
+}
+
+i.fa.fa-facebook-square {
+  color: #85D2E0;
+}
+
+i.fa.fa-heart {
+  color: #E2206F;
 }
 
 // .add {
