@@ -30,6 +30,10 @@
   color: white;
 }
 
+.fb-login-button {
+  height: 50px;
+  padding-top: 20px;
+}
 
 // .fixNav {
 //   background-color: white;
@@ -318,14 +322,21 @@ h1 {
 // }
 
 //event css
-// .events {
-//   clear: both;
-// }
+.event-title {
+  //height: 50px;
+  color: black;
+}
 
 
 .list-event-page {
   //clear: both;
-  margin-top: 150px;
+  margin-top: 125px;
+  margin-left: 30px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  width: 900px;
+  padding: 15px;
+
 }
 
 .add-activity {

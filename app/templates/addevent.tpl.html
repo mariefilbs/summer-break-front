@@ -4,20 +4,22 @@
   <div class="login-page">
   <div class="form" ng-hide="!loggedIn">
     <div class="add-activity">
-    <form class="add event-form" ng-submit="">
+    <form class="add event-form" ng-submit="create(event)">
+      <h2 class="event-title">General Event</h2>
       <input type="date" placeholder="date" ng-model="event.date"/>
       <input type="text" placeholder="title" ng-model="event.title"/>
       <input type="text" placeholder="description" ng-model="event.description"/>
       <input type="text" placeholder="location" ng-model="event.location"/>
+      <input type="text" placeholder="contact info" ng-model="event.contact"/>
       <input type="text" placeholder="event photo" ng-model="event.photoUrl" />
       <input type="text" placeholder="event website" ng-model="event.activityUrl"/>
-      <input type="text" plceholder="admission price" ng-model="event.admissionFee"/>
+      <input type="text" placeholder="admission price" ng-model="event.admissionFee"/>
       <button>submit</button>
       <p class="message"></p>
     </form>
     </div>
     <!--------------------------------->
-    <div class="add-activity">
+    <!-- <div class="add-activity">
     <form class="add job-form" ng-submit="">
       <input type="text" placeholder="title" ng-model="job.title"/>
       <input type="text" placeholder="employer" ng-model="job.employer"/>
@@ -29,7 +31,7 @@
       <p class="message"></p>
     </form>
     </div>
-  </div>
+  </div> -->
 </div>
 
       <button class="modal-close" ng-click="deactivate()"></button>

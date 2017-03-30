@@ -9,6 +9,28 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Lobster" rel="stylesheet">
   </head>
   <body ng-app='app'>
+    <!---Facebook SDK script---->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1053060318171888',
+          xfbml      : true,
+          version    : 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+   </script>
+   <!---------------------------->
+
      <div class="main-content" ui-view></div>
     <script src="https://use.fontawesome.com/3703b6b40b.js"></script>
     <script src="js/bundle.js"></script>

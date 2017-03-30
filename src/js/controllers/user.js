@@ -29,7 +29,7 @@ function UserController ($scope, $http, $cookies, $state, SERVER, $rootScope) {
     console.log(error);
     });
   }
-
+  
   $scope.deactivate = () => {
     $state.go('transparent.home');
   };
