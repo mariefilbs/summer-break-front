@@ -248,7 +248,7 @@ h1 {
 .form button {
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #85D3DF;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -259,15 +259,15 @@ h1 {
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: #43A047;
+  background: #85D3DF;
 }
 .form .message {
   margin: 15px 0 0;
-  color: #b3b3b3;
+  color: #85D3DF;
   font-size: 12px;
 }
 .form .message a {
-  color: #4CAF50;
+  color: #E2206F;
   text-decoration: none;
 }
 .form .register-form {
@@ -307,6 +307,12 @@ h1 {
 
 .main-card-content {
   //display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.card-content p {
+  text-align: center;
 }
 
 .row-cards {
@@ -314,12 +320,21 @@ h1 {
   justify-content: space-between;
 }
 
+.card-image {
+  height: 255px;
+}
+
+// .img-circle {
+//   border-radius: 50%;
+// }
+
 .main-card {
   align-items: center;
   width: 250px;
   margin: 40px auto;
   display: inline-block;
 }
+
 
 // .card-content {
 //   align-items: center;
