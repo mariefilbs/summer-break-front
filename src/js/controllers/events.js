@@ -12,13 +12,13 @@ function EventController ($scope, $http, $state, SERVER, $rootScope) {
 
   $scope.create = function (data) {
     $http.post(`${SERVER}/activities`, data).then(resp => {
-      $state.go('transparent.home');
+      $state.go('root.events');
     });
   };
 
-  $scope.toEvents = () => {
-    $state.go('root.events');
-  };
+  // $scope.toEvents = () => {
+  //   $state.go('root.events');
+  // };
 
   $scope.deactivate = () => {
     $state.go('transparent.home');
