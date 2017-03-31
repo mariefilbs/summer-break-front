@@ -9,7 +9,7 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <strong><a class="activity-website" href="/#!/activities/{{ activity.id }}">{{ activity.title }}</a></strong> <small>{{ activity.contact }}</small>
+              <strong><a class="activity-website" href="/#!/events/{{ activity.id }}">{{ activity.title }}</a></strong> <small>{{ activity.contact }}</small>
               <br>
               {{ activity.description }}
             </p>
@@ -27,3 +27,5 @@
         </div>
       </article>
 </div>
+
+<div class="details" ui-view></div>

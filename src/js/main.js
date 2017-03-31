@@ -8,6 +8,7 @@ import setup from './setup';
 import UserController from './controllers/user';
 import LayoutController from './controllers/layout';
 import EventController from './controllers/events';
+import SelectEventController from './controllers/selectevent';
 
 angular
   .module('app', ['ui.router', 'ngCookies'])
@@ -16,4 +17,5 @@ angular
   .constant('SERVER', SERVER)
   .controller('UserController', UserController)
   .controller('LayoutController', LayoutController)
-  .controller('EventController', EventController);
+  .controller('EventController', EventController)
+  .controller('SelectEventController', SelectEventController);

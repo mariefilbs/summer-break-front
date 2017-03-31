@@ -36,6 +36,11 @@ function Config ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/events.tpl.html',
       controller: 'EventController'
     })
+    .state('root.events.select-event', {
+      url: '/:id', // #!/home/photos/:id
+      templateUrl: 'templates/select-event.tpl.html',
+      controller: 'SelectEventController'
+    })
     .state('page-not-found', {
       url: '/not-found',
       template: `<h2>So sorry! Unable to find that URL.</h2>`

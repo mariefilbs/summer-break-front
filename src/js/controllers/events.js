@@ -16,10 +16,6 @@ function EventController ($scope, $http, $state, SERVER, $rootScope) {
     });
   };
 
-  // $scope.toEvents = () => {
-  //   $state.go('root.events');
-  // };
-
   $scope.deactivate = () => {
     $state.go('transparent.home');
   };
