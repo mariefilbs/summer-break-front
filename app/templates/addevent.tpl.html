@@ -5,37 +5,64 @@
   <div class="form" ng-hide="!loggedIn">
     <div class="add-activity">
     <form class="add event-form" ng-submit="create(event)">
-      <h2 class="event-title">General Event</h2>
-      <input type="date" placeholder="date" ng-model="event.date"/>
-      <input type="text" placeholder="title" ng-model="event.title"/>
-      <input type="text" placeholder="description" ng-model="event.description"/>
-      <input type="text" placeholder="location" ng-model="event.location"/>
-      <input type="text" placeholder="contact info" ng-model="event.contact"/>
-      <input type="text" placeholder="event photo" ng-model="event.photoUrl" />
-      <input type="text" placeholder="event website" ng-model="event.activityUrl"/>
-      <input type="text" placeholder="admission price" ng-model="event.admissionFee"/>
-      <button ng-click="toEvents()">submit</button>
-      <p class="message">Please allow 24 hours for your event to be approved. Thanks for your contribution!</p>
+      <h2 class="event-title">Please choose a category.</h2>
+      <select ng-model="event.category" placeholder="choose a category" ng-dropdown required ng-change="changeme()">
+        <!-- <option ng-option value="pleaseChoose">Please choose a category:</option> -->
+        <option ng-option value="generalEvent">General Events</option>
+        <option ng-option value="jobs">Jobs</option>
+        <option ng-option value="volunteer">Volunteer Work</option>
+        <option ng-option value="educational">Educational</option>
+        <option ng-option value="camps">Camps</option>
+      </select>
+      <!-----General Event Form-------->
+        <div ng-if="event.category == 'generalEvent' || event.category == 'educational' || event.category == 'camps'">
+          <input type="date" placeholder="date" ng-model="event.date"/>
+          <input type="text" placeholder="title" ng-model="event.title"/>
+          <input type="text" placeholder="description" ng-model="event.description"/>
+          <input type="text" placeholder="location" ng-model="event.location"/>
+          <input type="text" placeholder="contact info" ng-model="event.contact"/>
+          <input type="text" placeholder="event photo" ng-model="event.photoUrl" />
+          <input type="text" placeholder="event website" ng-model="event.activityUrl"/>
+          <input type="text" placeholder="admission price" ng-model="event.admissionFee"/>
+          <button ng-click="toEvents()">submit</button>
+          <p class="message">Please allow 24 hours for your event to be approved. Thanks for your contribution!</p>
+       </div>
+       <!-------------------------------->
+       <!---Job Form--------------------->
+       <div ng-if="event.category == 'jobs'">
+         <input type="text" placeholder="title" ng-model="event.title"/>
+         <input type="text" placeholder="employer" ng-model="event.employer"/>
+         <input type="text" placeholder="description" ng-model="event.description"/>
+         <input type="text" placeholder="location" ng-model="event.location"/>
+         <input type="text" placeholder="contact info" ng-model="event.contact"/>
+         <input type="email" placeholder="email" ng-model="event.email"/>
+         <!-- <input type="text" placeholder="company photo" ng-model="event.photoUrl" /> -->
+         <button ng-click="toEvents()">submit</button>
+         <p class="message">Please allow 24 hours for your event to be approved. Thanks for your contribution!</p>
+      </div>
+      <!--------------------------------->
+      <!---Volunteer Form---------------->
+      <div ng-if="event.category == 'volunteer'">
+        <input type="date" placeholder="date" ng-model="event.date"/>
+        <input type="text" placeholder="title" ng-model="event.title"/>
+        <input type="text" placeholder="description" ng-model="event.description"/>
+        <input type="text" placeholder="location" ng-model="event.location"/>
+        <input type="text" placeholder="contact info" ng-model="event.contact"/>
+        <input type="text" placeholder="event photo" ng-model="event.photoUrl" />
+        <input type="text" placeholder="organization website" ng-model="event.activityUrl"/>
+        <!-- <input type="text" placeholder="company photo" ng-model="event.photoUrl" /> -->
+        <button ng-click="toEvents()">submit</button>
+        <p class="message">Please allow 24 hours for your event to be approved. Thanks for your contribution!</p>
+     </div>
+     <!---------------------------------->
     </form>
-    </div>
+   </div>
     <!--------------------------------->
-    <!-- <div class="add-activity">
-    <form class="add job-form" ng-submit="">
-      <input type="text" placeholder="title" ng-model="job.title"/>
-      <input type="text" placeholder="employer" ng-model="job.employer"/>
-      <input type="text" placeholder="description" ng-model="job.description"/>
-      <input type="text" placeholder="location" ng-model="job.location"/>
-      <input type="text" placeholder="contact name" ng-model="job.contactName"/>
-      <input type="email" placeholder="contact email" ng-model="job.email"/>
-      <button>submit</button>
-      <p class="message"></p>
-    </form>
-    </div>
-  </div> -->
 </div>
 
       <button class="modal-close" ng-click="deactivate()"></button>
    </div>
+ </div>
 </div>
 
 <!----------------------------------------------------------------------->
