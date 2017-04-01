@@ -332,11 +332,13 @@ h1 {
 
 .card-image {
   height: 255px;
+
 }
 
-// .img-circle {
-//   border-radius: 50%;
-// }
+.img-circle {
+  //border-radius: 50%;
+  object-fit: cover;
+}
 
 .main-card {
   align-items: center;
@@ -353,9 +355,13 @@ h1 {
 //event css
 .general-events {
   border: 1px solid lightgrey;
+  margin: 30px;
 }
+
 .general-events-title {
   font-size: 160%;
+  border: 1px solid lightgrey;
+  padding-left: 40px;
 }
 
 .event-title {
@@ -364,14 +370,20 @@ h1 {
   padding-bottom: 15px;
 }
 
+.user-events {
+  border: 1px solid lightgrey;
+  height: 400px;
+  margin: 30px;
+}
+
 
 .list-event-page {
   //clear: both;
-  margin-top: 125px;
+  margin-top: 15px;
   margin-left: 30px;
   border-bottom: 1px solid lightgrey;
   border-radius: 3px;
-  width: 900px;
+  //width: 900px;
   padding: 15px;
 
 }

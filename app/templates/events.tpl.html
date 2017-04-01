@@ -1,5 +1,6 @@
-<div class="general-events">
-    <span class="general-events-title"> General Events</span>
+<div class="main-events columns">
+ <div class="general-events auto">
+    <span class="general-events-title"> General Events: </span>
       <article class="media list-event-page" ng-repeat='activity in activities'>
         <figure class="media-left">
           <p class="image is-128x128">
@@ -26,6 +27,7 @@
           </nav>
         </div>
       </article>
+ </div>
+ <div class="user-events column is-one-quarter">User Events</div>
 </div>
-
 <div class="details" ui-view></div>

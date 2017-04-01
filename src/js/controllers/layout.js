@@ -1,6 +1,13 @@
 import $ from 'jquery';
 
 function LayoutController ($scope, $rootScope, $state, $cookies, $http) {
+ console.log('in the layout controller');
+  function init () {
+    $http.get(`${SERVER}/users/:id`).then(resp => {
+      $scope.user = resp.data;
+      console.log(resp.data);
+    });
+  }
 
   $scope.signOut = () => {
     $rootScope.loggedIn = false;
