@@ -1,13 +1,9 @@
 import $ from 'jquery';
 
-function LayoutController ($scope, $rootScope, $state, $cookies, $http) {
- console.log('in the layout controller');
-  function init () {
-    $http.get(`${SERVER}/users/:id`).then(resp => {
-      $scope.user = resp.data;
-      console.log(resp.data);
-    });
-  }
+function LayoutController ($scope, $rootScope, $stateParams, $state, $cookies, $http, SERVER) {
+ //console.log('in the layout controller');
+  $rootScope.welcome = '';
+
 
   $scope.signOut = () => {
     $rootScope.loggedIn = false;
@@ -15,6 +11,11 @@ function LayoutController ($scope, $rootScope, $state, $cookies, $http) {
     $http.defaults.headers.common['access-token'] = null;
     $state.go('transparent.home');
   };
+
+  // $scope.$on('userInfo', (event, username) => {
+  //   console.log(username, "from layout controller");
+  //   //$scope.$broadcast('userInfo', (event, username));
+  // });
 
   // $scope.moveDown = () => {
   //   $state.go('root.home.about');
@@ -36,6 +37,6 @@ function LayoutController ($scope, $rootScope, $state, $cookies, $http) {
 
 }
 
-LayoutController.$inject = ['$scope', '$rootScope', '$state', '$cookies', '$http'];
+LayoutController.$inject = ['$scope', '$rootScope', '$stateParams', '$state', '$cookies', '$http', 'SERVER'];
 
 export default LayoutController;

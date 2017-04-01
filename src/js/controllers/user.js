@@ -3,6 +3,7 @@ import $ from 'jquery';
 function UserController ($scope, $http, $cookies, $state, SERVER, $rootScope) {
     //console.log($cookies);
   $scope.notifications = [];
+  $scope.welcome = '';
 
   $scope.removeMsg = (msg) => {
     var removed = $scope.notifications.filter(x => x != msg);
@@ -23,13 +24,17 @@ function UserController ($scope, $http, $cookies, $state, SERVER, $rootScope) {
     $http.post(`${SERVER}/login`, user).then(resp => {
       $rootScope.loggedIn = true;
       $cookies.put('access-token', resp.data.token);
+      let username = resp.data.user;
+      $scope.$emit('userInfo', username);
+
       $state.go('transparent.home');
+      console.log($rootScope.welcome);
 
     }).catch(error => {
     console.log(error);
     });
   }
-  
+
   $scope.deactivate = () => {
     $state.go('transparent.home');
   };

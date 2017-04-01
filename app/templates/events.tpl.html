@@ -1,18 +1,30 @@
-<div class="main-events columns">
- <div class="general-events auto">
+<div class="scroll-wrap">
+  <nav class="scroll-nav">
+    <ul>
+      <li><a href="#section-1" du-smooth-scroll du-scrollspy>General Events</a></li>
+      <li><a href="#section-2" du-smooth-scroll du-scrollspy>Volunteer</a></li>
+      <li><a du-smooth-scroll="section-3" du-scrollspy>Summer Camps</a></li>
+      <li><a href="#section-4" du-smooth-scroll du-scrollspy>Educational</a></li>
+      <li><a href="#section-5" du-smooth-scroll du-scrollspy>Jobs</a></li>
+    </ul>
+  </nav>
+<div class="columns">
+<div class="main-events column">
+  <!----general events section------------------>
+ <section  id="section-1" class="general-events auto">
     <span class="general-events-title"> General Events: </span>
-      <article class="media list-event-page" ng-repeat='activity in activities'>
+      <article class="media list-event-page" ng-repeat='general in generalEvents' >
         <figure class="media-left">
           <p class="image is-128x128">
-            <img ng-src="{{ activity.photoUrl }}">
+            <img ng-src="{{ general.photoUrl }}">
           </p>
         </figure>
         <div class="media-content">
           <div class="content">
             <p>
-              <strong><a class="activity-website" href="/#!/events/{{ activity.id }}">{{ activity.title }}</a></strong> <small>{{ activity.contact }}</small>
+              <strong><a class="general-website" href="/#!/events/{{ general.id }}">{{ general.title }}</a></strong> <small>{{ general.contact }}</small>
               <br>
-              {{ activity.description }}
+              {{ general.description }}
             </p>
           </div>
           <nav class="level is-mobile">
@@ -27,7 +39,134 @@
           </nav>
         </div>
       </article>
+ </section>
+ <!------------------------------------------>
+ <!----volunteer section---------------------->
+ <section  id="section-2" class="general-events auto">
+    <span class="general-events-title"> Volunteer: </span>
+      <article class="media list-event-page" ng-repeat='vol in volunteer'>
+        <figure class="media-left">
+          <p class="image is-128x128">
+            <img ng-src="{{ vol.photoUrl }}">
+          </p>
+        </figure>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong><a class="activity-website" href="/#!/events/{{ vol.id }}">{{ vol.title }}</a></strong> <small>{{ vol.contact }}</small>
+              <br>
+              {{ vol.description }}
+            </p>
+          </div>
+          <nav class="level is-mobile">
+            <div class="level-left">
+              <a class="level-item">
+                <span class="icon is-small"><i class="fa fa-facebook-square"></i></span>
+              </a>
+              <a class="level-item">
+                <span class="icon is-small"><i class="fa fa-heart"></i></span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </article>
+ </section>
+ <!------------------------------------------->
+ <!----Summer Camp section---------------------->
+ <section  id="section-3" class="general-events auto">
+    <span class="general-events-title"> Summer Camps: </span>
+      <article class="media list-event-page" ng-repeat='camp in camps'>
+        <figure class="media-left">
+          <p class="image is-128x128">
+            <img ng-src="{{ camp.photoUrl }}">
+          </p>
+        </figure>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong><a class="activity-website" href="/#!/events/{{ camp.id }}">{{ camp.title }}</a></strong> <small>{{ camp.contact }}</small>
+              <br>
+              {{ camp.description }}
+            </p>
+          </div>
+          <nav class="level is-mobile">
+            <div class="level-left">
+              <a class="level-item">
+                <span class="icon is-small"><i class="fa fa-facebook-square"></i></span>
+              </a>
+              <a class="level-item">
+                <span class="icon is-small"><i class="fa fa-heart"></i></span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </article>
+ </section>
+ <!------------------------------------------->
+ <!----volunteer section---------------------->
+ <section  id="section-4" class="general-events auto">
+    <span class="general-events-title"> Educational: </span>
+      <article class="media list-event-page" ng-repeat='education in educational'>
+        <figure class="media-left">
+          <p class="image is-128x128">
+            <img ng-src="{{ education.photoUrl }}">
+          </p>
+        </figure>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong><a class="activity-website" href="/#!/events/{{ education.id }}">{{ education.title }}</a></strong> <small>{{ education.contact }}</small>
+              <br>
+              {{ education.description }}
+            </p>
+          </div>
+          <nav class="level is-mobile">
+            <div class="level-left">
+              <a class="level-item">
+                <span class="icon is-small"><i class="fa fa-facebook-square"></i></span>
+              </a>
+              <a class="level-item">
+                <span class="icon is-small"><i class="fa fa-heart"></i></span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </article>
+ </section>
+ <!------------------------------------------->
+ <!----Jobs section---------------------->
+ <section  id="section-5" class="general-events auto">
+    <span class="general-events-title"> Jobs: </span>
+      <article class="media list-event-page" ng-repeat='job in jobs'>
+        <figure class="media-left">
+          <p class="image is-128x128">
+            <img ng-src="{{ job.photoUrl }}">
+          </p>
+        </figure>
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <strong><a class="activity-website" href="/#!/events/{{ job.id }}">{{ job.title }}</a></strong> <small>{{ job.contact }}</small>
+              <br>
+              {{ job.description }}
+            </p>
+          </div>
+          <nav class="level is-mobile">
+            <div class="level-left">
+              <a class="level-item">
+                <span class="icon is-small"><i class="fa fa-facebook-square"></i></span>
+              </a>
+              <a class="level-item">
+                <span class="icon is-small"><i class="fa fa-heart"></i></span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </article>
+ </section>
+ <!------------------------------------------->
  </div>
  <div class="user-events column is-one-quarter">User Events</div>
+</div>
 </div>
 <div class="details" ui-view></div>

@@ -1,9 +1,11 @@
 import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-cookies';
+import 'angular-scroll';
 import Config from './config';
 import SERVER from './server'
 import setup from './setup';
+
 
 import UserController from './controllers/user';
 import LayoutController from './controllers/layout';
@@ -11,7 +13,7 @@ import EventController from './controllers/events';
 import SelectEventController from './controllers/selectevent';
 
 angular
-  .module('app', ['ui.router', 'ngCookies'])
+  .module('app', ['ui.router', 'ngCookies', 'duScroll'])
   .config(Config)
   .run(setup)
   .constant('SERVER', SERVER)

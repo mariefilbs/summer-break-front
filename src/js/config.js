@@ -21,11 +21,11 @@ function Config ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/login.tpl.html',
       controller: 'UserController'
     })
-    .state('root.home.about', {
-      url: '/about',
-      templateUrl: 'templates/main-content.tpl.html',
-      controller: 'LayoutController'
-    })
+    // .state('root.home.about', {
+    //   url: '/about',
+    //   templateUrl: 'templates/main-content.tpl.html',
+    //   controller: 'LayoutController'
+    // })
     .state('transparent.addevent', {
       url: '/addevent',
       templateUrl: 'templates/addevent.tpl.html',

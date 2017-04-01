@@ -13,7 +13,7 @@
 
 .fix-nav {
   //margin-top: 180px;
-
+  position: fixed;
   width: 100%;
   font-family: 'Cuprum', sans-serif;
   background-color: #85D3DF;
@@ -353,6 +353,26 @@ h1 {
 // }
 
 //event css
+.main-events {
+  margin-top: 100px;
+}
+
+.scroll-nav {
+  // margin-left: 300px;
+  margin-top: 63px;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+
+}
+
+.scroll-nav, nav li, nav a {
+  display: inline-block;
+  padding-left: 20px;
+}
+
 .general-events {
   border: 1px solid lightgrey;
   margin: 30px;
