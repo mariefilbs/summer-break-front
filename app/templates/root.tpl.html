@@ -18,12 +18,12 @@
 <!-- Add the modifier "is-active" to display it on mobile -->
 <div class="nav-center nav-menu">
   <a href="#!/home" class="nav-item">Home</a>
-  <a href="#!/home/about" class="nav-item">About</a>
+  <a href="#!/about" class="nav-item">About</a>
   <a href="#!/addevent" class="nav-item" ng-hide="!loggedIn">Add an Event</a>
   <a href="#!/events" class="nav-item">Events</a>
 </div>
 <div class="nav-right nav-menu">
-  <span class="welcome">Welcome, {{ welcome.firstName }}</span>
+  <span ng-hide="!loggedIn" class="welcome">Welcome! {{ welcome.firstName }}</span>
   <a class="nav-item"><i class="fa fa-calendar" aria-hidden="true"></i></a>
 
   <span class="nav-item">
@@ -38,3 +38,13 @@
 </nav>
 <!------------------------------------------------------------------------>
 <div class="details" ui-view></div>
+
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>SummerBreak</strong>  developed by <a class="kurts-link" href="https://www.linkedin.com/in/rkwyckoff/">Kurt Wyckhoff</a> and <a  class="maries-link" href="https://github.com/mariefilbs">Marie Filbey.</a>
+      </p>
+    </div>
+  </div>
+</footer> -->

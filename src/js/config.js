@@ -21,7 +21,7 @@ function Config ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/login.tpl.html',
       controller: 'UserController'
     })
-    .state('root.home.about', {
+    .state('root.about', {
       url: '/about',
       templateUrl: 'templates/aboutus.tpl.html',
       controller: 'LayoutController'

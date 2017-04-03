@@ -17,12 +17,12 @@
 <!-- Add the modifier "is-active" to display it on mobile -->
 <div class="nav-center nav-menu">
   <a href="#!/home" class="nav-item">Home</a>
-  <a href="#!/home/about" class="nav-item">About</a>
+  <a href="#!/about" class="nav-item">About</a>
   <a href="#!/addevent" class="nav-item" ng-hide="!loggedIn">Add an Event</a>
   <a href="#!/events" class="nav-item">Events</a>
 </div>
 <div class="nav-right nav-menu">
-  <span class="welcome">Welcome, {{ User.firstName }}</span>
+  <span ng-hide="!loggedIn" class="welcome">Welcome! {{ User.firstName }}</span>
   <a class="nav-item"><i class="fa fa-calendar" aria-hidden="true"></i></a>
 
   <span class="nav-item">
@@ -38,7 +38,7 @@
 <!------------------------------------------------------------------------>
 <div class="details" ui-view></div>
 
-<footer class="footer">
+<!-- <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <p>
@@ -46,4 +46,4 @@
       </p>
     </div>
   </div>
-</footer>
+</footer> -->
