@@ -1,14 +1,13 @@
 import $ from 'jquery';
 
-function UserController ($scope, $http, $cookies, $state, SERVER, $rootScope) {
+function UserController ($scope, $http, $cookies, $state, SERVER, $stateParams, $rootScope) {
     //console.log($cookies);
   $scope.notifications = [];
-  $scope.welcome = '';
 
-  $scope.removeMsg = (msg) => {
-    var removed = $scope.notifications.filter(x => x != msg);
-    $scope.notifications = removed;
-  }
+  // $scope.removeMsg = (msg) => {
+  //   var removed = $scope.notifications.filter(x => x != msg);
+  //   $scope.notifications = removed;
+  // }
 
   $scope.register = (user) => {
     //console.log(user);
@@ -24,11 +23,15 @@ function UserController ($scope, $http, $cookies, $state, SERVER, $rootScope) {
     $http.post(`${SERVER}/login`, user).then(resp => {
       $rootScope.loggedIn = true;
       $cookies.put('access-token', resp.data.token);
-      let username = resp.data.user;
-      $scope.$emit('userInfo', username);
+      let userInfo = resp.data.user;
+      console.log(userInfo);
+
+      $cookies.putObject('userInfo', userInfo);
+      $rootScope.userInfo = userInfo;
+      // console.log(userInfo.firstName);
 
       $state.go('transparent.home');
-      console.log($rootScope.welcome);
+      // console.log($rootScope.welcome);
 
     }).catch(error => {
     console.log(error);
@@ -44,6 +47,6 @@ function UserController ($scope, $http, $cookies, $state, SERVER, $rootScope) {
   };
 }
 
-UserController.$inject = ['$scope', '$http', '$cookies', '$state', 'SERVER', '$rootScope'];
+UserController.$inject = ['$scope', '$http', '$cookies', '$state', 'SERVER', '$stateParams', '$rootScope'];
 
 export default UserController;

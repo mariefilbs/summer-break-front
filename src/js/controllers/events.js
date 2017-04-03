@@ -1,4 +1,4 @@
-function EventController ($scope, $http, $state, SERVER, $rootScope) {
+function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVER) {
   //console.log('in the event controller');
   $scope.activities = [];
 
@@ -12,7 +12,7 @@ function EventController ($scope, $http, $state, SERVER, $rootScope) {
   function init () {
     $http.get(`${SERVER}/activities`).then(resp => {
       $scope.activities = resp.data;
-      console.log(resp.data);
+      //console.log(resp.data);
 
       $scope.generalEvents = $scope.activities.filter((data) => {return data.category === 'generalEvent';});
       $scope.volunteer = $scope.activities.filter((data) => {return data.category === 'volunteer';});
@@ -21,13 +21,12 @@ function EventController ($scope, $http, $state, SERVER, $rootScope) {
       $scope.jobs = $scope.activities.filter((data) => {return data.category === 'jobs';});
 
 
-
-      console.log($scope.generalEvents);
+      //console.log($scope.generalEvents);
     });
   }
 
-
   init();
+
 
   $scope.create = function (data) {
     $http.post(`${SERVER}/activities`, data).then(resp => {
@@ -40,6 +39,6 @@ function EventController ($scope, $http, $state, SERVER, $rootScope) {
     $state.go('transparent.home');
   };
 }
-EventController.$inject = ['$scope', '$http', '$state', 'SERVER'];
+EventController.$inject = ['$scope', '$http', '$state', '$stateParams', '$rootScope', 'SERVER'];
 
 export default EventController;

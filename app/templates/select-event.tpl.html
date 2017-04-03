@@ -1,21 +1,45 @@
 <div class="modal is-active">
  <div class="modal-background"></div>
   <div class="modal-content">
-    <p class="image is-3x2">
-      <img ng-src="{{ event.photoUrl }}">
-    </p>
-  <footer class="modal-card-foot" ng-hide="!loggedIn">
-    <div class="comments">
-     <p ng-repeat="comment in comments"><span class="username-in-modal">{{ comment.User.firstName}}</span>: {{ comment.description }}</p>
-     <p>{{ liveComment.description }}</p>
-   </div>
-   <div class="comment-box">
-   <input type="text" placeholder="Add comment..." ng-model="data.comment"/>
-    <div class="modal-buttons">
-      <a class="button is-primary" ng-click="addComment(data.comment)">Add</a>
-      <a class="button" ng-click="deactivate()">Cancel</a>
-    </div>
+    <div class="select-event-card card">
+  <div class="select-event-image card-image">
+    <figure class="image is-1x1">
+      <img id="modal-image" ng-src="{{ event.photoUrl }}">
+    </figure>
   </div>
+  <div class="card-content select-event-content">
+    <div class="media select-event-media">
+      <div class="media-left">
+      </div>
+      <div class="media-content">
+        <p class="title is-4">{{ event.title }}</p>
+        <p class="subtitle is-6"> {{ event.activityUrl }}</p>
+      </div>
+    </div>
+
+    <div class="content">
+      {{ event.description }}
+      <br>
+      {{ event.admissionFee }}
+      <p class="subtitle is-6"> {{ event.contact }}</p>
+    </div>
+    <a class="button is-info">RSVP</a>
+    <i class="fa fa-map-marker" aria-hidden="true">Directions</i>
+
+  </div>
+</div>
+  <footer class="modal-card-foot" ng-hide="!loggedIn">
+        <div class="comments">
+         <p ng-repeat="comment in comments"><span class="username-in-modal">{{ comment.User.firstName}}</span>: {{ comment.description }}</p>
+         <p>{{ liveComment.description }}</p>
+       </div>
+       <div class="comment-box">
+       <input type="text" placeholder="Add comment..." ng-model="data.comment"/>
+        <div class="modal-buttons">
+          <a class="button is-primary" ng-click="addComment(data.comment)">Add</a>
+          <a class="button" ng-click="deactivate()">Cancel</a>
+        </div>
+       </div>
     </footer>
   <button class="modal-close" ng-click="deactivate()"></button>
  </div>

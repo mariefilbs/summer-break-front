@@ -1,16 +1,17 @@
 <div class="scroll-wrap">
   <nav class="scroll-nav">
     <ul>
-      <li><a href="#section-1" du-smooth-scroll du-scrollspy>General Events</a></li>
-      <li><a href="#section-2" du-smooth-scroll du-scrollspy>Volunteer</a></li>
-      <li><a du-smooth-scroll="section-3" du-scrollspy>Summer Camps</a></li>
-      <li><a href="#section-4" du-smooth-scroll du-scrollspy>Educational</a></li>
-      <li><a href="#section-5" du-smooth-scroll du-scrollspy>Jobs</a></li>
+      <li><a class="section-1" href="#section-1" du-smooth-scroll du-scrollspy>General Events</a></li>
+      <li><a class="section-2" href="#section-2" du-smooth-scroll du-scrollspy>Volunteer</a></li>
+      <li><a class="section-3" du-smooth-scroll="section-3" du-scrollspy>Summer Camps</a></li>
+      <li><a class="section-4" href="#section-4" du-smooth-scroll du-scrollspy>Educational</a></li>
+      <li><a class="section-5" href="#section-5" du-smooth-scroll du-scrollspy>Jobs</a></li>
     </ul>
   </nav>
 <div class="columns">
 <div class="main-events column">
   <!----general events section------------------>
+
  <section  id="section-1" class="general-events auto">
     <span class="general-events-title"> General Events: </span>
       <article class="media list-event-page" ng-repeat='general in generalEvents' >
@@ -21,10 +22,10 @@
         </figure>
         <div class="media-content">
           <div class="content">
-            <p>
+            <p class="main-event-description">
               <strong><a class="general-website" href="/#!/events/{{ general.id }}">{{ general.title }}</a></strong> <small>{{ general.contact }}</small>
               <br>
-              {{ general.description }}
+              <span>{{ general.description }}</span>
             </p>
           </div>
           <nav class="level is-mobile">
@@ -35,6 +36,7 @@
               <a class="level-item">
                 <span class="icon is-small"><i class="fa fa-heart"></i></span>
               </a>
+              <a class="button is-info">RSVP</a>
             </div>
           </nav>
         </div>
