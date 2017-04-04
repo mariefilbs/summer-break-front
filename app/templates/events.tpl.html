@@ -36,7 +36,7 @@
               <a class="level-item">
                 <span class="icon is-small"><i class="fa fa-heart"></i></span>
               </a>
-              <a class="button is-info">RSVP</a>
+              <a class="button is-info" ng-click="rsvp(general.id)">RSVP</a>
             </div>
           </nav>
         </div>
@@ -68,6 +68,8 @@
               <a class="level-item">
                 <span class="icon is-small"><i class="fa fa-heart"></i></span>
               </a>
+              <a class="button is-info" ng-click="rsvp(vol.id)">RSVP</a>
+
             </div>
           </nav>
         </div>
@@ -99,6 +101,8 @@
               <a class="level-item">
                 <span class="icon is-small"><i class="fa fa-heart"></i></span>
               </a>
+              <a class="button is-info" ng-click="rsvp(camp.id)">RSVP</a>
+
             </div>
           </nav>
         </div>
@@ -130,6 +134,8 @@
               <a class="level-item">
                 <span class="icon is-small"><i class="fa fa-heart"></i></span>
               </a>
+              <a class="button is-info" ng-click="rsvp(education.id)">RSVP</a>
+
             </div>
           </nav>
         </div>
@@ -161,6 +167,8 @@
               <a class="level-item">
                 <span class="icon is-small"><i class="fa fa-heart"></i></span>
               </a>
+              <a class="button is-info" ng-click="rsvp(job.id)">RSVP</a>
+
             </div>
           </nav>
         </div>
@@ -168,7 +176,20 @@
  </section>
  <!------------------------------------------->
  </div>
- <div class="user-events column is-one-quarter">User Events</div>
+ <div ng-hide="!loggedIn" class="user-events column is-one-quarter">
+   <div class="user-container media">
+     <div class="media-left">
+        <figure class="image is-48x48">
+          <img src="http://bulma.io/images/placeholders/96x96.png" alt="Image">
+        </figure>
+      </div>
+      <div class="media-content">
+       <p class="user-name title is-4">{{ userInfo.firstName }} {{ userInfo.lastName}}</p>
+       <p class="user-email subtitle is-6">{{ userInfo.email }}</p>
+     </div>
+    <div class="user-attending"> Here are the events you have RSVP'd to:</div>
+    <div class="user-rsvp" ng-repeat="event in events"> {{ }}</div>
+ </div>
 </div>
 </div>
 <div class="details" ui-view></div>

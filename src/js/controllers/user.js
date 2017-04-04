@@ -2,7 +2,9 @@ import $ from 'jquery';
 
 function UserController ($scope, $http, $cookies, $state, SERVER, $stateParams, $rootScope) {
     //console.log($cookies);
-  $scope.notifications = [];
+
+
+  //$scope.notifications = [];
 
   // $scope.removeMsg = (msg) => {
   //   var removed = $scope.notifications.filter(x => x != msg);
@@ -23,8 +25,10 @@ function UserController ($scope, $http, $cookies, $state, SERVER, $stateParams, 
     $http.post(`${SERVER}/login`, user).then(resp => {
       $rootScope.loggedIn = true;
       $cookies.put('access-token', resp.data.token);
+      $http.defaults.headers.common['access-token'] = resp.data.token;
       let userInfo = resp.data.user;
       console.log(userInfo);
+
 
       $cookies.putObject('userInfo', userInfo);
       $rootScope.userInfo = userInfo;

@@ -3,18 +3,19 @@
 <div class="modal-content">
   <div class="login-page">
   <div class="form">
-    <form class="register-form" ng-submit="register(user)">
-      <input type="text" placeholder="first name" ng-model="user.firstName"/>
-      <input type="text" placeholder="last lame" ng-model="user.lastName"/>
-      <input type="text" placeholder="email address" ng-model="user.email"/>
-      <input type="password" placeholder="password" ng-model="user.password"/>
+    <form class="register-form css-form" ng-submit="register(user)" novalidate>
+      <input type="text" placeholder="first name" ng-model="user.firstName" required/>
+      <input type="text" placeholder="last lame" ng-model="user.lastName" required/>
+      <input type="text" placeholder="email address" ng-model="user.email" required/>
+      <input type="password" placeholder="password" ng-model="user.password" min="5" required/>
+      <input type="text" placeholder="photo URL" ng-model="user.profileUrl" />
       <!-- <input type="text" placeholder="add a profile url" ng-model="user.profile_url" /> -->
       <button>create</button>
       <p class="message">Already registered? <a ng-click="switchForms()">Sign In</a></p>
     </form>
 
     <!--------------------------------->
-    <form class="login-form" ng-submit="login(signin)">
+    <form class="login-form css-form" novalidate ng-submit="login(signin)">
       <!---new user notification--------->
            <div ng-repeat="msg in notifications" class="pop-up-new-user notification is-primary">
             <button ng-click="removeMsg(msg)"
@@ -24,8 +25,8 @@
                   </p>
            </div>
       <!---------------------------------->
-      <input type="text" placeholder="email" ng-model="signin.email"/>
-      <input type="password" placeholder="password" ng-model="signin.password"/>
+      <input type="text" placeholder="email" ng-model="signin.email" required/>
+      <input type="password" placeholder="password" ng-model="signin.password" required/>
       <button>login</button>
       <p class="message">Not registered? <a ng-click="switchForms()">Create an account</a></p>
       <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>

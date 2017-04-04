@@ -12,7 +12,8 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
   function init () {
     $http.get(`${SERVER}/activities`).then(resp => {
       $scope.activities = resp.data;
-      //console.log(resp.data);
+      console.log(resp.data);
+      console.log(resp.data);
 
       $scope.generalEvents = $scope.activities.filter((data) => {return data.category === 'generalEvent';});
       $scope.volunteer = $scope.activities.filter((data) => {return data.category === 'volunteer';});
@@ -20,8 +21,6 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
       $scope.educational = $scope.activities.filter((data) => {return data.category === 'educational';});
       $scope.jobs = $scope.activities.filter((data) => {return data.category === 'jobs';});
 
-
-      //console.log($scope.generalEvents);
     });
   }
 
@@ -33,6 +32,11 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
       $state.go('root.events');
     });
   };
+
+  $scope.rsvp = function (id) {
+
+  };
+
 
 
   $scope.deactivate = () => {

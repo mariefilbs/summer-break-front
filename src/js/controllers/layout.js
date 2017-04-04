@@ -8,7 +8,10 @@ function LayoutController ($scope, $rootScope, $stateParams, $state, $cookies, $
   $scope.signOut = () => {
     $rootScope.loggedIn = false;
     $cookies.remove('access-token');
+    $cookies.remove('userInfo');
     $http.defaults.headers.common['access-token'] = null;
+    
+
     $state.go('transparent.home');
   };
 
