@@ -35,7 +35,9 @@
 .fb-login-button {
   height: 50px;
   padding-top: 20px;
+  z-index: 1;
 }
+
 
 .css-form input.ng-invalid.ng-touched {
     background-color: #FA787E;
@@ -464,8 +466,8 @@ h1 {
   height: 400px;
   margin: 30px;
   margin-top: 142px;
-  text-align: center;
   position: sticky;
+  display: flex;
   //margin-right: 10px;
 }
 
@@ -483,13 +485,32 @@ h1 {
 
 //user box
 .user-container {
-  height: 100px;
-  width: auto;
+  width: 100%;
+  height: auto;
+}
+
+.user-content {
+
+}
+
+.list-user-events {
+  padding-top: 20px;
+  clear: both;
+}
+
+.user-rsvp {
+  height: auto;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
+}
+.rsvp-list li {
+  border-top: 1px solid lightgrey;
 }
 
 //select-event css
 #modal-image {
-  height: 271px;
+  //height: 271px;
   width: auto;
   margin: 0px auto;
 }

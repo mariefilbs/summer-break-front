@@ -16,7 +16,7 @@
       </select>
       <!-----General Event Form-------->
         <div ng-if="event.category == 'generalEvent' || event.category == 'educational' || event.category == 'camps'">
-          <input type="date" placeholder="date" ng-model="event.date"/>
+          <input type="text" placeholder="date" ng-model="event.date"/>
           <input type="text" placeholder="title" ng-model="event.title"/>
           <input type="text" placeholder="description" ng-model="event.description"/>
           <input type="text" placeholder="location" ng-model="event.location"/>

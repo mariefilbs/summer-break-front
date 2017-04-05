@@ -30,9 +30,14 @@
           </div>
           <nav class="level is-mobile">
             <div class="level-left">
-              <a class="level-item">
-                <span class="icon is-small"><i class="fa fa-facebook-square"></i></span>
-              </a>
+              <!-- <a class="level-item">
+                <!-- <div
+                  class="fb-like"
+                  data-share="true"
+                  data-width="450"
+                  data-show-faces="true">
+                </div> -->
+              </a> -->
               <a class="level-item">
                 <span class="icon is-small"><i class="fa fa-heart"></i></span>
               </a>
@@ -177,19 +182,29 @@
  <!------------------------------------------->
  </div>
  <div ng-hide="!loggedIn" class="user-events column is-one-quarter">
-   <div class="user-container media">
-     <div class="media-left">
-        <figure class="image is-48x48">
-          <img src="http://bulma.io/images/placeholders/96x96.png" alt="Image">
-        </figure>
+   <div class="user-container">
+     <div class="user-left">
+          <img class="image is-32x32" src="http://bulma.io/images/placeholders/96x96.png" alt="Image">
       </div>
-      <div class="media-content">
+      <div class="user-content">
        <p class="user-name title is-4">{{ userInfo.firstName }} {{ userInfo.lastName}}</p>
        <p class="user-email subtitle is-6">{{ userInfo.email }}</p>
      </div>
-    <div class="user-attending"> Here are the events you have RSVP'd to:</div>
-    <div class="user-rsvp" ng-repeat="event in events"> {{ }}</div>
- </div>
+     <div class="list-user-events">
+       <div class="user-attending"> Here are the events you have RSVP'd to:</div>
+       <div class="user-rsvp">
+         <ul class="rsvp-list">
+           <li ng-repeat="event in userRsvp">
+             <!-- <img class="image is-48x48" ng-src="{{ event.Activity.photoUrl }}"/> -->
+             <a href="#!/events/{{ event.activity_id }}">
+             {{event.Activity.title}} </a>
+             <br></br>
+             {{event.Activity.date}}
+           </li>
+         </ul>
+       </div>
+     </div>
+   </div>
 </div>
 </div>
 <div class="details" ui-view></div>
