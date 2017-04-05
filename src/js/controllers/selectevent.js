@@ -1,16 +1,11 @@
 function SelectEventController ($scope, $http, $state, $stateParams, SERVER) {
-   console.log('In select event controller.');
   $scope.comments = [];
 
   function init () {
     var id = $stateParams.id;
     $http.get(`${SERVER}/activities/${id}`).then(resp => {
-      console.log(resp.data);
       $scope.event = resp.data;
       $scope.comments = resp.data.Comments;
-
-
-      console.log($scope.comments);
     });
   }
 
@@ -18,11 +13,10 @@ function SelectEventController ($scope, $http, $state, $stateParams, SERVER) {
 
   $scope.addComment = function (data) {
     var id = $stateParams.id;
-    var comment = {comment: data};
-    $http.post(`${SERVER}/activities/${id}/comment`, comment).then(resp => {
-      $scope.comment = resp.data;
+    var comment = { description : data.description };
+    $http.post(`${SERVER}/activities/${id}/comments`, comment).then(resp => {
       $scope.liveComment = resp.data;
-    }).then($state.reload());
+    });//.then($state.reload());
   }
   $scope.deactivate = function () {
     $state.go('root.events');

@@ -34,9 +34,9 @@
          <p>{{ liveComment.description }}</p>
        </div>
        <div class="comment-box">
-       <input type="text" placeholder="Add comment..." ng-model="data.comment"/>
+       <input type="text" placeholder="Add comment..." ng-model="comment.description"/>
         <div class="modal-buttons">
-          <a class="button is-primary" ng-click="addComment(data.comment)">Add</a>
+          <a class="button is-primary" ng-click="addComment(comment)">Add</a>
           <a class="button" ng-click="deactivate()">Cancel</a>
         </div>
        </div>

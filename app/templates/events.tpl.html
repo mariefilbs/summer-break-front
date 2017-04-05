@@ -38,8 +38,8 @@
                   data-show-faces="true">
                 </div> -->
               </a>
-              <a class="button is-danger"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp
-                  1 likes</a>
+              <a ng-click="liked(general.id)" class="button is-danger">
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ general.likesnumber }}</a>
               <a class="button is-info" ng-click="rsvp(general.id)">RSVP</a>
             </div>
           </nav>
@@ -66,10 +66,8 @@
           </div>
           <nav class="level is-mobile">
             <div class="level-left">
-              <a class="level-item">
-                <span class="icon is-small"><i class="fa fa-facebook-square"></i></span>
-              </a>
-              <a class="button is-danger">likes</a>
+              <a ng-click="liked(vol.id)" class="button is-danger">
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ vol.likesnumber }}</a>
               <a class="button is-info" ng-click="rsvp(vol.id)">RSVP</a>
 
             </div>
@@ -97,10 +95,8 @@
           </div>
           <nav class="level is-mobile">
             <div class="level-left">
-              <a class="level-item">
-                <span class="icon is-small"><i class="fa fa-facebook-square"></i></span>
-              </a>
-              <a class="button is-danger">likes</a>
+              <a ng-click="liked(camp.id)" class="button is-danger">
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ camp.likesnumber }}</a>
               <a class="button is-info" ng-click="rsvp(camp.id)">RSVP</a>
 
             </div>
@@ -128,10 +124,8 @@
           </div>
           <nav class="level is-mobile">
             <div class="level-left">
-              <a class="level-item">
-                <span class="icon is-small"><i class="fa fa-facebook-square"></i></span>
-              </a>
-              <a class="button is-danger">likes</a>
+              <a ng-click="liked(education.id)" class="button is-danger">
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ education.likesnumber }}</a>
               <a class="button is-info" ng-click="rsvp(education.id)">RSVP</a>
 
             </div>
@@ -159,10 +153,8 @@
           </div>
           <nav class="level is-mobile">
             <div class="level-left">
-              <a class="level-item">
-                <span class="icon is-small"><i class="fa fa-facebook-square"></i></span>
-              </a>
-              <a class="button is-danger">likes</a>
+              <a ng-click="liked(job.id)" class="button is-danger">
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ job.likesnumber }}</a>
               <a class="button is-info" ng-click="rsvp(job.id)">RSVP</a>
 
             </div>
