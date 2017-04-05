@@ -20,4 +20,5 @@ angular
   .controller('UserController', UserController)
   .controller('LayoutController', LayoutController)
   .controller('EventController', EventController)
-  .controller('SelectEventController', SelectEventController);
+  .controller('SelectEventController', SelectEventController)
+  .value('duScrollOffset', 125);

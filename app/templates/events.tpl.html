@@ -3,7 +3,7 @@
     <ul>
       <li><a class="section-1" href="#section-1" du-smooth-scroll du-scrollspy>General Events</a></li>
       <li><a class="section-2" href="#section-2" du-smooth-scroll du-scrollspy>Volunteer</a></li>
-      <li><a class="section-3" du-smooth-scroll="section-3" du-scrollspy>Summer Camps</a></li>
+      <li><a class="section-3" href="#section-3" du-smooth-scroll du-scrollspy>Summer Camps</a></li>
       <li><a class="section-4" href="#section-4" du-smooth-scroll du-scrollspy>Educational</a></li>
       <li><a class="section-5" href="#section-5" du-smooth-scroll du-scrollspy>Jobs</a></li>
     </ul>
@@ -37,10 +37,8 @@
                   data-width="450"
                   data-show-faces="true">
                 </div> -->
-              </a> -->
-              <a class="level-item">
-                <span class="icon is-small"><i class="fa fa-heart"></i></span>
               </a>
+              <a class="button is-danger">likes</a>
               <a class="button is-info" ng-click="rsvp(general.id)">RSVP</a>
             </div>
           </nav>
@@ -70,9 +68,7 @@
               <a class="level-item">
                 <span class="icon is-small"><i class="fa fa-facebook-square"></i></span>
               </a>
-              <a class="level-item">
-                <span class="icon is-small"><i class="fa fa-heart"></i></span>
-              </a>
+              <a class="button is-danger">likes</a>
               <a class="button is-info" ng-click="rsvp(vol.id)">RSVP</a>
 
             </div>
@@ -103,9 +99,7 @@
               <a class="level-item">
                 <span class="icon is-small"><i class="fa fa-facebook-square"></i></span>
               </a>
-              <a class="level-item">
-                <span class="icon is-small"><i class="fa fa-heart"></i></span>
-              </a>
+              <a class="button is-danger">likes</a>
               <a class="button is-info" ng-click="rsvp(camp.id)">RSVP</a>
 
             </div>
@@ -136,9 +130,7 @@
               <a class="level-item">
                 <span class="icon is-small"><i class="fa fa-facebook-square"></i></span>
               </a>
-              <a class="level-item">
-                <span class="icon is-small"><i class="fa fa-heart"></i></span>
-              </a>
+              <a class="button is-danger">likes</a>
               <a class="button is-info" ng-click="rsvp(education.id)">RSVP</a>
 
             </div>
@@ -169,9 +161,7 @@
               <a class="level-item">
                 <span class="icon is-small"><i class="fa fa-facebook-square"></i></span>
               </a>
-              <a class="level-item">
-                <span class="icon is-small"><i class="fa fa-heart"></i></span>
-              </a>
+              <a class="button is-danger">likes</a>
               <a class="button is-info" ng-click="rsvp(job.id)">RSVP</a>
 
             </div>
@@ -196,10 +186,9 @@
          <ul class="rsvp-list">
            <li ng-repeat="event in userRsvp">
              <!-- <img class="image is-48x48" ng-src="{{ event.Activity.photoUrl }}"/> -->
-             <a href="#!/events/{{ event.activity_id }}">
-             {{event.Activity.title}} </a>
-             <br></br>
-             {{event.Activity.date}}
+             <div><a href="#!/events/{{ event.activity_id }}">
+             {{event.Activity.title}} </a></div>
+             <div>{{event.Activity.date}}</div>
            </li>
          </ul>
        </div>
