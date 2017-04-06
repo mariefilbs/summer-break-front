@@ -25,15 +25,16 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
       $scope.jobs = $scope.activities.filter((data) => {return data.category === 'jobs';});
 
 
-
     let id = $rootScope.userInfo.id;
     //console.log($rootScope.userInfo);
+
     $http.get(`${SERVER}/users/${id}/events`).then(resp => {
       $scope.userRsvp = resp.data;
-      //console.log($scope.userRsvp);
-      //$scope.isAttending = $scope.userEvents.filter((data) => {return resp.data.Activities;});
-      //console.log($scope.isAttending);
+      console.log($scope.userRsvp);
+
     });
+
+
 
     let googleMapsHTML = `
         <p class="map">
@@ -53,6 +54,12 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
 
   init();
 
+  $scope.attendingStatus = (activity_id) => {
+    return $scope.userRsvp.filter((data) => {
+      let attending = activity_id == data.Activity.id && data.attending;
+      return attending;
+    }).length;
+  }
 
   $scope.create = (data) => {
     $http.post(`${SERVER}/activities`, data).then(resp => {
@@ -63,18 +70,10 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
   $scope.rsvp = (id) => {
     //let id = $stateParams.id;
     $http.post(`${SERVER}/activities/${id}/rsvp`).then(resp => {
-        //console.log(resp.data);
+        console.log(resp.data);
     })
   }
 
-  // $scope.colorChange = (id) => {
-  //   var background = document.getElementById(id).style.backgroundColor;
-  //   if (background == 'is-info') {
-  //     document.getElementById(id).style.background = 'is-success';
-  //   } else {
-  //     document.getElementById(id).style.background = 'is-info';
-  //   }
-  // };
 
   $scope.liked = (id) => {
     $http.post(`${SERVER}/activities/${id}/likes`).then(resp => {

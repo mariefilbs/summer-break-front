@@ -40,7 +40,7 @@
               </a>
               <a ng-click="liked(general.id)" class="button is-danger">
                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ general.likesnumber }}</a>
-              <a id="general-button" class="button is-info" ng-click="rsvp(general.id); colorChange(general-button)">RSVP</a>
+              <a ng-class="{'is-success' : attendingStatus(general.id), 'is-info': !attendingStatus(general.id)}" class="button" ng-click="rsvp(general.id)">RSVP</a>
             </div>
           </nav>
         </div>
