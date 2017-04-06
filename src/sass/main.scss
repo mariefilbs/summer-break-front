@@ -522,7 +522,7 @@ a.button {
 
 //select-event css
 #modal-image {
-  //height: 271px;
+  height: 271px;
   width: auto;
   margin: 0px auto;
 }
@@ -531,6 +531,7 @@ div.card-content.select-event-content {
   clear: both;
   height: auto;
   z-index: 1;
+  margin-top: 50px;
 }
 
 .select-event-image {

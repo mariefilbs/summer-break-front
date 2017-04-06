@@ -13,7 +13,7 @@
       </div>
       <div class="media-content">
         <p class="title is-4">{{ event.title }}</p>
-        <p class="subtitle is-6"><a href="http://www.computercamps.com/tech-camps/game-design-camp-for-teens/program-overview/"> {{ event.activityUrl }}</p></a>
+        <p class="subtitle is-6"><a href="{{ event.website }}"> {{ event.activityUrl }}</p></a>
       </div>
     </div>
 
@@ -23,14 +23,14 @@
       {{ event.admissionFee }}
       <p class="subtitle is-6"> {{ event.contact }}</p>
     </div>
-    <a class="button is-info">RSVP</a>
+    <a ng-class="{'is-success' : attendingStatus(event.id), 'is-info': !attendingStatus(event.id)}" class="button is-info" ng-click="rsvp(event.id)">RSVP</a>
     <i class="fa fa-map-marker" aria-hidden="true">Directions</i>
 
   </div>
 </div>
   <footer class="modal-card-foot" ng-hide="!loggedIn">
         <div class="comments">
-         <p ng-repeat="comment in comments"><span class="username-in-modal">{{ comment.User.firstName}}</span>: {{ comment.description }}</p>
+         <p ng-repeat="comment in comments"><span class="username-in-modal">{{ comment.User.firstName}} {{ comment.User.lastName }}</span>: {{ comment.description }}</p>
          <p>{{ liveComment.description }}</p>
        </div>
        <div class="comment-box">

@@ -67,18 +67,18 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
     });
   };
 
-  $scope.rsvp = (id) => {
+  $rootScope.rsvp = (id) => {
     //let id = $stateParams.id;
     $http.post(`${SERVER}/activities/${id}/rsvp`).then(resp => {
         console.log(resp.data);
-    })
+    }).then($state.reload());
   }
 
 
   $scope.liked = (id) => {
     $http.post(`${SERVER}/activities/${id}/likes`).then(resp => {
       console.log(resp.data);
-    })
+    }).then($state.reload());
   }
 
 
