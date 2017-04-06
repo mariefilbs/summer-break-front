@@ -39,9 +39,9 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
         <p class="map">
           <iframe
             width="520"
-            height="550"
+            height="373"
             frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/search?key=${googleTOKEN}&q={{The+Iron+Yard,Atlanta+Georgia}}">
+            src="https://www.google.com/maps/embed/v1/search?key=${googleTOKEN}&q={{Escape+The+Room,Atlanta+Georgia}}">
           </iframe>
         </p>
     `;

@@ -12,7 +12,6 @@
 // }
 
 .fix-nav {
-  //margin-top: 180px;
   position: fixed;
   width: 100%;
   font-family: 'Cuprum', sans-serif;
@@ -452,22 +451,15 @@ h1 {
   padding-bottom: 15px;
 }
 
-// .main-event-description {
-//   height: 70px;
-// }
-
-// .main-event-description span {
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-// }
-
-// .right-side {
-//   border: 1px solid lightgrey;
-//   margin-top: 141px;
-//   margin-right: 30px;
-//   display: flex;
-//   flex-direction: column;
-// }
+//holding tank
+#holding-tank {
+  margin-top: 150px;
+  position:fixed;
+  height: 500px;
+  width: 100%;
+  clear: both;
+  border: 1px solid lightgrey;
+}
 
 .user-events {
   border: 1px solid lightgrey;
@@ -547,10 +539,16 @@ div.card-content.select-event-content {
 
 .modal-card-foot {
   height: auto;
+  display: flex;
 }
 
 .comment-box {
-  padding-left: 401px;
+  align-self: flex-end;
+}
+
+.comments {
+  width: 100%;
+  align-self: flex-start;
 }
 
 // .card-content .select-event-content {

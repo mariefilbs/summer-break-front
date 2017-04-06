@@ -41,11 +41,11 @@ function Config ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/select-event.tpl.html',
       controller: 'SelectEventController'
     })
-    // .state('root.pending-tank', {
-    //   url: '/pending',
-    //   templateUrl: 'templates/pending.tpl.html',
-    //   controller: 'PendingEventsController'
-    // })
+    .state('root.pending-tank', {
+      url: '/pending',
+      templateUrl: 'templates/pendingevents.tpl.html',
+      controller: 'PendingEventsController'
+    })
     .state('page-not-found', {
       url: '/not-found',
       template: `<h2>So sorry! Unable to find that URL.</h2>`

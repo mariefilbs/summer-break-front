@@ -16,7 +16,7 @@ function SelectEventController ($scope, $http, $state, $stateParams, SERVER) {
     var comment = { description : data.description };
     $http.post(`${SERVER}/activities/${id}/comments`, comment).then(resp => {
       $scope.liveComment = resp.data;
-    });//.then($state.reload());
+    }).then($state.reload());
   }
   $scope.deactivate = function () {
     $state.go('root.events');
