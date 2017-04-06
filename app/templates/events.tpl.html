@@ -40,7 +40,7 @@
               </a>
               <a ng-click="liked(general.id)" class="button is-danger">
                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ general.likesnumber }}</a>
-              <a class="button is-info" ng-click="rsvp(general.id)">RSVP</a>
+              <a id="general-button" class="button is-info" ng-click="rsvp(general.id); colorChange(general-button)">RSVP</a>
             </div>
           </nav>
         </div>
@@ -164,29 +164,39 @@
  </section>
  <!------------------------------------------->
  </div>
+ <!-----user-events-box----------------------->
+
  <div ng-hide="!loggedIn" class="user-events column is-one-quarter">
-   <div class="user-container">
-     <div class="user-left">
-          <img class="image is-32x32" src="http://bulma.io/images/placeholders/96x96.png" alt="Image">
+  <div class="user-container">
+    <div class="user-left">
+         <img class="image is-32x32" src="http://bulma.io/images/placeholders/96x96.png" alt="Image">
+     </div>
+     <div class="user-content">
+      <p class="user-name title is-4">{{ userInfo.firstName }} {{ userInfo.lastName}}</p>
+      <p class="user-email subtitle is-6">{{ userInfo.email }}</p>
+    </div>
+    <div class="list-user-events">
+      <div class="user-attending"> Here are the events you have RSVP'd to:</div>
+      <div class="user-rsvp">
+        <ul class="rsvp-list">
+          <li ng-repeat="event in userRsvp">
+            <!-- <img class="image is-48x48" ng-src="{{ event.Activity.photoUrl }}"/> -->
+            <div><a href="#!/events/{{ event.activity_id }}">
+            {{event.Activity.title}} </a></div>
+            <div>{{event.Activity.date}}</div>
+          </li>
+        </ul>
       </div>
-      <div class="user-content">
-       <p class="user-name title is-4">{{ userInfo.firstName }} {{ userInfo.lastName}}</p>
-       <p class="user-email subtitle is-6">{{ userInfo.email }}</p>
-     </div>
-     <div class="list-user-events">
-       <div class="user-attending"> Here are the events you have RSVP'd to:</div>
-       <div class="user-rsvp">
-         <ul class="rsvp-list">
-           <li ng-repeat="event in userRsvp">
-             <!-- <img class="image is-48x48" ng-src="{{ event.Activity.photoUrl }}"/> -->
-             <div><a href="#!/events/{{ event.activity_id }}">
-             {{event.Activity.title}} </a></div>
-             <div>{{event.Activity.date}}</div>
-           </li>
-         </ul>
-       </div>
-     </div>
-   </div>
+    </div>
+  </div>
 </div>
+ </div>
+ <!---google-location-map-------------------->
+     <div class="location-container">
+       <div class="location-title"> Event Locations: </div>
+       <div id="location"></div>
+     </div>
+ <!------------------------------------------>
+
 </div>
 <div class="details" ui-view></div>

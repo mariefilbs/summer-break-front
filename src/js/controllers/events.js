@@ -1,3 +1,6 @@
+import $ from 'jquery';
+import { googleTOKEN } from '../token.js';
+
 function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVER) {
   console.log('in the event controller');
   $scope.activities = [];
@@ -31,13 +34,27 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
       //$scope.isAttending = $scope.userEvents.filter((data) => {return resp.data.Activities;});
       //console.log($scope.isAttending);
     });
+
+    let googleMapsHTML = `
+        <p class="map">
+          <iframe
+            width="520"
+            height="550"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/search?key=${googleTOKEN}&q={{The+Iron+Yard,Atlanta+Georgia}}">
+          </iframe>
+        </p>
+    `;
+
+    $('#location').append(googleMapsHTML);
+
   })
 }
 
   init();
 
 
-  $scope.create = function (data) {
+  $scope.create = (data) => {
     $http.post(`${SERVER}/activities`, data).then(resp => {
       $state.go('root.events');
     });
@@ -47,9 +64,17 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
     //let id = $stateParams.id;
     $http.post(`${SERVER}/activities/${id}/rsvp`).then(resp => {
         //console.log(resp.data);
-      // $rootScope.varAttending = $scope.clickAttending.filter((activities)=> {return activities.attending = true;});
     })
   }
+
+  // $scope.colorChange = (id) => {
+  //   var background = document.getElementById(id).style.backgroundColor;
+  //   if (background == 'is-info') {
+  //     document.getElementById(id).style.background = 'is-success';
+  //   } else {
+  //     document.getElementById(id).style.background = 'is-info';
+  //   }
+  // };
 
   $scope.liked = (id) => {
     $http.post(`${SERVER}/activities/${id}/likes`).then(resp => {

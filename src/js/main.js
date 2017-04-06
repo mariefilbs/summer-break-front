@@ -11,6 +11,7 @@ import UserController from './controllers/user';
 import LayoutController from './controllers/layout';
 import EventController from './controllers/events';
 import SelectEventController from './controllers/selectevent';
+import PendingEventsController from './controllers/pendingevents';
 
 angular
   .module('app', ['ui.router', 'ngCookies', 'duScroll'])
@@ -21,4 +22,5 @@ angular
   .controller('LayoutController', LayoutController)
   .controller('EventController', EventController)
   .controller('SelectEventController', SelectEventController)
+  .controller('PendingEventsController', PendingEventsController)
   .value('duScrollOffset', 125);
