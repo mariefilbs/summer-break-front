@@ -1,18 +1,21 @@
 <div id="holding-tank">
-  <article class="media list-pending" ng-repeat >
+  <article class="media list-pending" ng-repeat="pending in pendingEvents">
     <figure class="media-left">
       <p class="image is-128x128">
-        <img ng-src="{{ general.photoUrl }}">
+        <img ng-src="{{ pending.photoUrl }}">
       </p>
     </figure>
     <div class="media-content">
       <div class="content">
         <p class="main-event-description">
-          <strong><a class="general-website">{{ general.title }}</a></strong> <small>{{ general.contact }}</small>
+          <strong><a class="general-website">{{ pending.title }}</a></strong> <small>{{ pending.contact }}</small>
           <br>
-          <span>{{ general.descriptio n }}</span>
+          <span>{{ pending.description }}</span>
         </p>
       </div>
+      <a href="#!/events" ng-click="addEvent()" class="button is-success">Approve</a>
+      <a ng-click="editEvent(pending.id)" class="button is-warning">Edit</a>
+      <a ng-click="deleteEvent(pending.id)" class="button is-danger">Delete</a>
     </article>
 
 

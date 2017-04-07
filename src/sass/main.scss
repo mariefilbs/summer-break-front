@@ -459,6 +459,13 @@ h1 {
   width: 100%;
   clear: both;
   border: 1px solid lightgrey;
+  display: flex;
+  justify-content: center;
+}
+
+.list-pending {
+  width: 600px;
+  height: auto;
 }
 
 .user-events {
@@ -518,7 +525,6 @@ a.button {
 .rsvp-list li {
   border-top: 1px solid lightgrey;
 }
-
 
 //select-event css
 #modal-image {

@@ -14,7 +14,7 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
   //console.log($scope.activities);
 
   function init () {
-    $http.get(`${SERVER}/activities`).then(resp => {
+    $http.get(`${SERVER}/activities/all/live`).then(resp => {
       $scope.activities = resp.data;
       console.log(resp.data);
 
