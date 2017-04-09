@@ -10,17 +10,31 @@ function PendingEventsController ($scope, $http, $state, $stateParams, SERVER) {
   init();
 
   $scope.addEvent = (data) => {
-    $http.post(`${SERVER}/activities`, data).then(resp => {
+    let id = $stateParams.id;
+    $http.put(`${SERVER}/activities/${id}`).then(resp => {
       console.log(resp.data);
-      $scope.isActivity = true;
-    })
-  }
+    $scope.isActivity = true;
+  })
+}
 
-  $scope.editEvent = (id) => {
+
+  $scope.updateEvent = (id) => {
     $http.put(`${SERVER}/activities/${id}`).then(resp => {
       console.log(resp.data);
     })
   }
+
+  $scope.enableEditor = (pending) => {
+    pending.editing = true;
+  };
+
+  $scope.disableEditor = function (pending) {
+    pending.editing = false;
+  };
+
+  $scope.save = function() {
+    $scope.disableEditor();
+  };
 
   $scope.deleteEvent = (id) => {
     $http.delete(`${SERVER}/activities/${id}`).then(resp => {

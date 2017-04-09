@@ -38,12 +38,7 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
 
     let googleMapsHTML = `
         <p class="map">
-          <iframe
-            width="520"
-            height="373"
-            frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/search?key=${googleTOKEN}&q={{Escape+The+Room,Atlanta+Georgia}}">
-          </iframe>
+          <iframe src="https://www.google.com/maps/d/embed?mid=1fCTiwFyox-v_GHKcbrfCBFiLmQs" width="640" height="480"></iframe>
         </p>
     `;
 

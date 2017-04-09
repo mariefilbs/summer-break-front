@@ -1,5 +1,16 @@
 <div id="holding-tank">
-  <article class="media list-pending" ng-repeat="pending in pendingEvents">
+  <section class="auto">
+ <article class="media list-event-page" ng-repeat='pending in pendingEvents'>
+    <div class="form-content">
+      <form ng-show="pending.editing" ng-submit="updateEvent(pending.id)">
+        <input ng-model="pending.title" />
+        <input ng-model="pending.photoUrl"/>
+        <input ng-model="pending.description"/>
+        <input ng-model="pending.contact"/>
+      </form>
+    </div>
+
+
     <figure class="media-left">
       <p class="image is-128x128">
         <img ng-src="{{ pending.photoUrl }}">
@@ -7,17 +18,30 @@
     </figure>
     <div class="media-content">
       <div class="content">
-        <p class="main-event-description">
-          <strong><a class="general-website">{{ pending.title }}</a></strong> <small>{{ pending.contact }}</small>
+        <p>
+          <strong><a class="activity-website">{{ pending.title }}</a></strong> <small>{{ pending.contact }}</small>
           <br>
-          <span>{{ pending.description }}</span>
+          {{ pending.description }}
         </p>
       </div>
-      <a href="#!/events" ng-click="addEvent()" class="button is-success">Approve</a>
-      <a ng-click="editEvent(pending.id)" class="button is-warning">Edit</a>
+
+
+      <div>
+      <a href="#!/events" ng-click="addEvent(pending)" class="button is-success">Approve</a>
+
+
+      <a ng-click="enableEditor(pending)" ng-class="{ editing: editing }"class="button is-warning">Edit</a>
+      <span ng-show="pending.editing">
+        <a ng-click="save(); updateEvent(pending.id); disableEditor(pending)" class="button is-light">save</a>
+        or
+        <a ng-click="disableEditor(pending)" class="button is-dark">cancel</a>
+      </span>
+
+
       <a ng-click="deleteEvent(pending.id)" class="button is-danger">Delete</a>
-    </article>
+    </div>
+  </div>
 
-
-
+  </article>
+ </section>
 </div>

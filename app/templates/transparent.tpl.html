@@ -1,25 +1,25 @@
 <!----navigation bar ----------------------------------------------------->
 <nav class="nav trans-nav">
 <div class="nav-left">
-  <a class="nav-item logo"><span class="summer">Summer</span> <span class="break">Break</span></a>
+  <a class="nav-item logo"><h2 class="summer" data-shadow='summer'>Summer</h2> <span class="break">Break</span></a>
 
 </div>
 
 <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
 <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
 <span class="nav-toggle">
-  <span></span>
-  <span></span>
-  <span></span>
+  <a>Home</a>
+  <a>About</a>
+  <a>Event</a>
 </span>
 
 <!-- This "nav-menu" is hidden on mobile -->
 <!-- Add the modifier "is-active" to display it on mobile -->
 <div class="nav-center nav-menu">
-  <a href="#!/home" class="nav-item">Home</a>
-  <a href="#!/about" class="nav-item">About</a>
-  <a href="#!/addevent" class="nav-item" ng-hide="!loggedIn">Add an Event</a>
-  <a href="#!/events" class="nav-item">Events</a>
+  <a href="#!/home" class="nav-item top-nav-item">Home</a>
+  <a href="#!/about" class="nav-item top-nav-item">About</a>
+  <a href="#!/addevent" class="nav-item top-nav-item" ng-hide="!loggedIn">Add an Event</a>
+  <a href="#!/events" class="nav-item top-nav-item">Events</a>
 </div>
 <div class="nav-right nav-menu">
   <span ng-hide="!loggedIn" class="welcome">Welcome, {{ userInfo.firstName }}!</span>
