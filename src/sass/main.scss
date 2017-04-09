@@ -123,6 +123,47 @@ a.nav-item.logo {
   border: 1px solid #F3BA3A;
 }
 
+.middle {
+  width: 900px;
+  height: auto;
+  margin: 175px;
+  margin-top: 15px;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.welcome-to {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 410%;
+  color: #2AA38E;
+  margin-left: -200px;
+}
+
+.to-your {
+  margin-left: -110px;
+}
+
+.not-so-typical {
+  margin-left: -115px;
+}
+
+.summer-break-middle {
+  margin-left: -60px;
+  letter-spacing: 1px;
+}
+
+.summer-break {
+  font-family: 'Arsenal', sans-serif;
+  font-size: 210%;
+}
+
+.our-mission {
+  font-size: 150%;
+  letter-spacing: 3px;
+}
+
 //mini-nav bar links
 #section-1 {
   color: #F3BA3A;
