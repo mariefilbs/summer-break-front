@@ -5,7 +5,7 @@
   <div class="form" ng-hide="!loggedIn">
     <div class="add-activity">
     <form class="add event-form" ng-submit="create(event)">
-      <h2 class="event-title">Please choose a category.</h2>
+      <p class="event-title">Please choose a category.</p>
       <select ng-model="event.category" placeholder="choose a category" ng-dropdown required ng-change="changeme()">
         <!-- <option ng-option value="pleaseChoose">Please choose a category:</option> -->
         <option ng-option value="generalEvent">General Events</option>
