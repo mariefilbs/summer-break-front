@@ -70,16 +70,23 @@ nav.scroll-nav {
 
 a.nav-item {
   color: white;
-  font-size: 113%;
+  //font-size: 113%;
 
 }
 
 .top-nav-item {
-  margin-top: -25px;
+  margin-top: -88px;
+  font-size: 1.5em;
+}
+
+.nav-center {
+  margin-right: -285.5px;
+  text-shadow: 1px 1px 2px black;
 }
 
 a.button {
   margin-top: 11px;
+  margin: 3px;
 }
 
 .nav-right {
@@ -102,8 +109,18 @@ a.nav-item.logo {
 }
 
 .welcome {
-  padding-right: 38px;
-  padding-top: 24px;
+  padding-right: 26px;
+  padding-top: 15px;
+  text-shadow: 1px 1px 2px black;
+}
+
+.fa.fa-archive {
+  margin-top: 10px;
+}
+
+#sign-in-out {
+  margin: 3px;
+  border: 1px solid #F3BA3A;
 }
 
 //mini-nav bar links
@@ -143,7 +160,7 @@ a.nav-item.logo {
   position: relative;
   height: 650px;
   display: flex;
-  justify-content: center;
+
   background-image: url('/images/teens.jpg');
   background-position: center;
   background-size: cover;
@@ -152,8 +169,6 @@ a.nav-item.logo {
 }
 
 .landing {
-  display: flex;
-  justify-content: center;
   font-size: 750%;
   color: white;
 }
@@ -171,9 +186,9 @@ a.nav-item.logo {
 i.fa.fa-angle-double-down {
   color: white;
   font-size: 400%;
-  align-items: center;
+  align-self: flex-end;
   padding-left: 185px;
-  padding-top: 70px;
+
 }
 
 i.fa.fa-calendar:before {
