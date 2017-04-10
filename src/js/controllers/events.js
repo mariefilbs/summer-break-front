@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import { googleTOKEN } from '../token.js';
 
-function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVER) {
-  console.log('in the event controller');
+function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVER, EventService) {
+  //console.log('in the event controller');
   $scope.activities = [];
 
   $scope.generalEvents = [];
@@ -11,7 +11,8 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
   $scope.educational = [];
   $scope.jobs = [];
   $scope.userRsvp = [];
-  //console.log($scope.activities);
+
+  $scope.attendees = [];
 
   function init () {
     $http.get(`${SERVER}/activities/all/live`).then(resp => {
@@ -30,11 +31,13 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
 
     $http.get(`${SERVER}/users/${id}/events`).then(resp => {
       $scope.userRsvp = resp.data;
-      console.log($scope.userRsvp);
+      //console.log($scope.userRsvp);
 
     });
 
-
+    // $http.get(`${SERVER}/activities/${id}/rsvp`).then(resp => {
+    //      console.log(resp.data)
+    // })
 
     let googleMapsHTML = `
         <p class="map">
@@ -56,6 +59,13 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
     }).length;
   }
 
+  // $scope.getAttendees = (id) => {
+  //   return $http.get(`${SERVER}/activities/${id}/rsvp`).then(resp => {
+  //     console.log(resp.data)
+  //     return resp.data.length
+  //   })
+  // }
+
   $scope.create = (data) => {
     $http.post(`${SERVER}/activities`, data).then(resp => {
       $state.go('root.events');
@@ -65,14 +75,14 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
   $rootScope.rsvp = (id) => {
     //let id = $stateParams.id;
     $http.post(`${SERVER}/activities/${id}/rsvp`).then(resp => {
-        console.log(resp.data);
+        //console.log(resp.data);
     }).then($state.reload());
   }
 
 
   $scope.liked = (id) => {
     $http.post(`${SERVER}/activities/${id}/likes`).then(resp => {
-      console.log(resp.data);
+      //console.log(resp.data);
     }).then($state.reload());
   }
 
@@ -81,6 +91,6 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
     $state.go('transparent.home');
   };
 }
-EventController.$inject = ['$scope', '$http', '$state', '$stateParams', '$rootScope', 'SERVER'];
+EventController.$inject = ['$scope', '$http', '$state', '$stateParams', '$rootScope', 'SERVER', 'EventService'];
 
 export default EventController;

@@ -2,6 +2,7 @@ import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-cookies';
 import 'angular-scroll';
+
 import Config from './config';
 import SERVER from './server'
 import setup from './setup';

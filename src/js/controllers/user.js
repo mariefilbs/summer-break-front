@@ -32,7 +32,9 @@ function UserController ($scope, $http, $cookies, $state, SERVER, $stateParams, 
 
       $cookies.putObject('userInfo', userInfo);
       $rootScope.userInfo = userInfo;
-      // console.log(userInfo.firstName);
+      console.log(userInfo.firstName);
+
+
 
       $state.go('transparent.home');
       // console.log($rootScope.welcome);

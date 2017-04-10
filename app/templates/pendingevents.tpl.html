@@ -1,5 +1,5 @@
 <div id="holding-tank">
-  <section class="auto">
+  <section class="holding-section">
  <article class="media list-event-page" ng-repeat='pending in pendingEvents'>
     <div class="form-content">
       <form ng-show="pending.isEditing" ng-submit="updateEvent(pending.id)">
@@ -25,7 +25,7 @@
         <p>
           <strong><a class="activity-website">{{ pending.title }}</a></strong> <small>{{ pending.contact }}</small>
           <br></br>
-          <small>{{pending.email }}</small>
+          <small>{{pending.email}}</small>
           <small>{{pending.activityUrl}}</small>
           <small>{{pending.employer}}</small>
           <small>{{pending.location}}</small>

@@ -1,11 +1,14 @@
-function PendingEventsController ($scope, $http, $state, $stateParams, SERVER, EventService) {
+function PendingEventsController ($scope, $http, $state, $rootScope, $stateParams, SERVER, EventService) {
   $scope.pendingEvents = [];
+
 
   function init () {
     // EventService.fetchPending().then(resp => { $scope.pendingEvents = resp.data })
     $http.get(`${SERVER}/activities/all/pending`).then(resp => {
       $scope.pendingEvents = resp.data;
-      console.log(resp.data);
+      console.log(resp.data.length);
+      $rootScope.numberOfPending = resp.data.length;
+
     })
   }
   init();
@@ -18,12 +21,6 @@ function PendingEventsController ($scope, $http, $state, $stateParams, SERVER, E
   }
 
 
-  // $scope.updateEvent = (id, data) => {
-  //   $http.put(`${SERVER}/activities/${id}`, data).then(resp => {
-  //     console.log(resp.data);
-  //   })
-  // }
-
   $scope.enableEditor = (pending) => {
     pending.isEditing = true;
   };
@@ -34,7 +31,14 @@ function PendingEventsController ($scope, $http, $state, $stateParams, SERVER, E
 
   $scope.save = function(pending) {
     pending.isEditing = false;
-    EventService.updateEvent(pending).then(resp => { console.log("Save successful"); })
+    EventService.updateEvent(pending).then(
+      function successCallback(res){
+        console.log('success!');
+      },
+      function errorCallback(res){
+        console.log('error');
+      }
+    );
   };
 
   $scope.deleteEvent = (id) => {
@@ -46,6 +50,6 @@ function PendingEventsController ($scope, $http, $state, $stateParams, SERVER, E
 }
 
 
-PendingEventsController.$inject = ['$scope', '$http', '$state', '$stateParams', 'SERVER', 'EventService'];
+PendingEventsController.$inject = ['$scope', '$http', '$state', '$rootScope', '$stateParams', 'SERVER', 'EventService'];
 
 export default PendingEventsController;

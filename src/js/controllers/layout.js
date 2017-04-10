@@ -1,7 +1,5 @@
-import $ from 'jquery';
 
-function LayoutController ($scope, $rootScope, $stateParams, $state, $cookies, $http, SERVER) {
- //console.log('in the layout controller');
+function LayoutController ($scope, $rootScope, $state, $cookies, $http) {
   $rootScope.welcome = '';
 
 
@@ -10,36 +8,13 @@ function LayoutController ($scope, $rootScope, $stateParams, $state, $cookies, $
     $cookies.remove('access-token');
     $cookies.remove('userInfo');
     $http.defaults.headers.common['access-token'] = null;
-    
+
 
     $state.go('transparent.home');
   };
 
-  // $scope.$on('userInfo', (event, username) => {
-  //   console.log(username, "from layout controller");
-  //   //$scope.$broadcast('userInfo', (event, username));
-  // });
-
-  // $scope.moveDown = () => {
-  //   $state.go('root.home.about');
-  // }
-
-// console.log( () => {return window.scrollY()} );
-  // var mn = $('.nav');
-  //    mns = 'main-nav-scrolled';
-  //    hdr = $('landing-container').height();
-  //
-  // $(window).scroll(function() {
-  //   if($(this).scrollTop() > 100) {
-  //     mn.addClass(mns);
-  //   } else {
-  //     mn.removeClass(mns);
-  //   }
-  // });
-
-
 }
 
-LayoutController.$inject = ['$scope', '$rootScope', '$stateParams', '$state', '$cookies', '$http', 'SERVER'];
+LayoutController.$inject = ['$scope', '$rootScope', '$state', '$cookies', '$http'];
 
 export default LayoutController;
