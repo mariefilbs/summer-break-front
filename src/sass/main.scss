@@ -109,7 +109,7 @@ a.nav-item.logo {
 .break {
   font-family: 'Cuprum', sans-serif;
   margin-top: 12px;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 2px #1D335F;
 }
 
 .welcome {
@@ -151,6 +151,7 @@ a.nav-item.logo {
 
 .not-so-typical {
   margin-left: -115px;
+  background-color: #F3BA3A;
 }
 
 .summer-break-middle {
@@ -230,6 +231,7 @@ a.nav-item.logo {
 
 .landing-logo .break {
   margin-top: -70px;
+  text-shadow: 1px 1px 2px #1D335F;
 }
 
 i.fa.fa-angle-double-down {
@@ -333,28 +335,28 @@ h2 {
   color: white;
   font-family: 'Righteous', serif;
   font-size: 1em;
-  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+  text-shadow: .03em .03em 0 #1D335F;
 }
-  h2:after {
-    content: attr(data-shadow);
-    position: absolute;
-    top: .06em; left: .06em;
-    z-index: -1;
-    text-shadow: none;
-    background-image:
-      linear-gradient(
-        45deg,
-        transparent 45%,
-        hsla(48,20%,90%,1) 45%,
-        hsla(48,20%,90%,1) 55%,
-        transparent 0
-        );
-    background-size: .05em .05em;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    animation: shad-anim 15s linear infinite;
-}
+//   h2:after {
+//     content: attr(data-shadow);
+//     position: absolute;
+//     top: .06em; left: .06em;
+//     z-index: -1;
+//     text-shadow: none;
+//     background-image:
+//       linear-gradient(
+//         45deg,
+//         transparent 45%,
+//         hsla(48,20%,90%,1) 45%,
+//         hsla(48,20%,90%,1) 55%,
+//         transparent 0
+//         );
+//     background-size: .05em .05em;
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//
+//     animation: shad-anim 15s linear infinite;
+// }
 
 @keyframes shad-anim {
   0% {background-position: 0 0}
@@ -470,11 +472,12 @@ h2 {
   margin-top: -102px;
   margin-right: -140px;
   text-align: center;
+  text-shadow: 1px 1px #355557;
 }
 
 .activity-images-container {
   width: 800px;
-  margin-left: 115px;
+  margin-left: 155px;
 }
 
 .activity-box {
@@ -499,9 +502,19 @@ h2 {
 }
 
 .cat-images {
+
   height: auto;
   margin: 25px;
   object-fit: cover;
+}
+
+.cat-images img {
+  width: 450px;
+  border-radius: 5px;
+}
+
+.cat-images img:hover {
+  transform: scale(1.1);
 }
 
 .main-card-content {
@@ -735,9 +748,9 @@ footer {
 }
 
 .kurts-link {
-  color: #85D2DF;
+  color: #ECB438;
 }
 
 .maries-link {
-  color: #E2206F;
+  color: #ECB438;
 }
