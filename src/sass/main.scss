@@ -79,6 +79,10 @@ a.nav-item {
   font-size: 1.5em;
 }
 
+.top-nav-item a:hover {
+  color: #2BA48F;
+}
+
 .nav-center {
   margin-right: -285.5px;
   text-shadow: 1px 1px 2px black;
@@ -137,8 +141,8 @@ a.nav-item.logo {
 .welcome-to {
   font-family: 'Abril Fatface', cursive;
   font-size: 410%;
-  color: #2AA38E;
-  margin-left: -200px;
+  color: #1D335F;
+  margin-left: -220px;
 }
 
 .to-your {
@@ -152,6 +156,10 @@ a.nav-item.logo {
 .summer-break-middle {
   margin-left: -60px;
   letter-spacing: 1px;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 410%;
+  color: #1D335F;
+  margin-left: -220px;
 }
 
 .summer-break {
@@ -451,6 +459,49 @@ h2 {
 }
 .container .info span .fa {
   color: #EF3B3A;
+}
+
+.activities-title {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 350%;
+  font-weight: bolder;
+  letter-spacing: 14px;
+  color: lightgrey;
+  margin-top: -102px;
+  margin-right: -140px;
+  text-align: center;
+}
+
+.activity-images-container {
+  width: 800px;
+  margin-left: 115px;
+}
+
+.activity-box {
+  width: 800px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.activity-image-container li a {
+  margin: 5px;
+  font-size: 110%;
+}
+
+.category-images {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: -137px;
+}
+
+.cat-images {
+  height: auto;
+  margin: 25px;
+  object-fit: cover;
 }
 
 .main-card-content {
