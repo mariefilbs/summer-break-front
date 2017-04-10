@@ -138,15 +138,15 @@
  <section  id="section-5" class="general-events auto">
     <span class="general-events-title"> Jobs: </span>
       <article class="media list-event-page" ng-repeat='job in jobs'>
-        <figure class="media-left">
+        <!-- <figure class="media-left">
           <p class="image is-128x128">
             <img ng-src="{{ job.photoUrl }}">
           </p>
-        </figure>
+        </figure> -->
         <div class="media-content">
           <div class="content">
             <p>
-              <strong><a class="activity-website" href="/#!/events/{{ job.id }}">{{ job.title }}</a></strong> <small>{{ job.contact }}</small>
+              <strong><a class="activity-website" href="/#!/events/{{ job.id }}">{{ job.title }}</a></strong> <small>{{ job.contact }}</small><small>{{ job.email }}</small>
               <br>
               {{ job.description }}
             </p>

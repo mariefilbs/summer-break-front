@@ -23,13 +23,13 @@
 </div>
 <div class="nav-right nav-menu">
   <span ng-hide="!loggedIn" class="welcome">Welcome, {{ userInfo.firstName }}!</span>
-  <a href="#!/pending" class="nav-item"><i class="fa fa-calendar" aria-hidden="true"></i></a>
+  <a href="#!/pending" class="nav-item"><i class="fa fa-archive" aria-hidden="true"></i></a>
 
   <span class="nav-item">
     <a href="#!/users" class="button" ng-hide="loggedIn" >
       <span>Sign In/Register</span>
     </a>
-    <a class="button" ng-show="loggedIn">
+    <a  id="sign-in-out" class="button" ng-show="loggedIn">
       <span ng-click="signOut()">Sign Out</span>
     </a>
   </span>

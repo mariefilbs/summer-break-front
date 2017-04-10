@@ -2,11 +2,15 @@
   <section class="auto">
  <article class="media list-event-page" ng-repeat='pending in pendingEvents'>
     <div class="form-content">
-      <form ng-show="pending.editing" ng-submit="updateEvent(pending.id)">
-        <input ng-model="pending.title" />
-        <input ng-model="pending.photoUrl"/>
-        <input ng-model="pending.description"/>
-        <input ng-model="pending.contact"/>
+      <form ng-show="pending.isEditing" ng-submit="updateEvent(pending.id)">
+        <input placeholder="date" ng-model="pending.date"/>
+        <input placeholder="title" ng-model="pending.title" />
+        <input placeholder="photo url" ng-model="pending.photoUrl"/>
+        <input placeholder="description" ng-model="pending.description"/>
+        <input placeholder="contact" ng-model="pending.contact"/>
+        <input placeholder="location" ng-model="pending.location"/>
+        <input placeholder="employer" ng-model="pending.employer"/>
+        <input type="email" placeholder="email" ng-model="pending.email"/>
       </form>
     </div>
 
@@ -20,6 +24,12 @@
       <div class="content">
         <p>
           <strong><a class="activity-website">{{ pending.title }}</a></strong> <small>{{ pending.contact }}</small>
+          <br></br>
+          <small>{{pending.email }}</small>
+          <small>{{pending.activityUrl}}</small>
+          <small>{{pending.employer}}</small>
+          <small>{{pending.location}}</small>
+          <small>{{pending.date}}</small>
           <br>
           {{ pending.description }}
         </p>
@@ -27,12 +37,12 @@
 
 
       <div>
-      <a href="#!/events" ng-click="addEvent(pending)" class="button is-success">Approve</a>
+      <a href="#!/events" ng-click="approve(pending.id)" class="button is-success">Approve</a>
 
 
-      <a ng-click="enableEditor(pending)" ng-class="{ editing: editing }"class="button is-warning">Edit</a>
-      <span ng-show="pending.editing">
-        <a ng-click="save(); updateEvent(pending.id); disableEditor(pending)" class="button is-light">save</a>
+      <a ng-click="enableEditor(pending)" ng-class="{ isEditing: true }"class="button is-warning">Edit</a>
+      <span ng-show="pending.isEditing">
+        <a ng-click="save(pending)" class="button is-light">save</a>
         or
         <a ng-click="disableEditor(pending)" class="button is-dark">cancel</a>
       </span>
