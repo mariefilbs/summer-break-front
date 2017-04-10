@@ -20,6 +20,25 @@
   <div class="our-mission">Our Mission:</div>
 </div> -->
 <!-------------------------->
+<!---featured events--------->
+<div class="featured-title">
+<div class="most-popular">Most Popular Events:</div>
+</div>
+
+<div class="featured-events">
+  <div class="featured-event-card" ng-repeat="event in featured">
+    <div class="card-image">
+   <figure class="image is-1by1">
+     <img ng-src="{{event.photoUrl}}" alt="Image">
+   </figure>
+   <div class="media-content">
+        <p class="is-small">{{event.title}}</p>
+    </div>
+  </div>
+ </div>
+ </div>
+
+<!--------------------------->
 <!---Activities------------->
 <div class="activity-images-container">
   <div class="activities-title is-offset-one-quarter">ACTIVITIES</div>

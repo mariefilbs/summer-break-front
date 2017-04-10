@@ -1,5 +1,5 @@
 
-function LayoutController ($scope, $rootScope, $state, $cookies, $http) {
+function LayoutController ($scope, $rootScope, $state, $cookies, $http, SERVER) {
   $rootScope.welcome = '';
 
 
@@ -13,8 +13,14 @@ function LayoutController ($scope, $rootScope, $state, $cookies, $http) {
     $state.go('transparent.home');
   };
 
+  $scope.featured = [];
+  $http.get(`${SERVER}/activities/all/feature`).then(resp => {
+    console.log(resp.data);
+    $scope.featured = resp.data;
+  })
+
 }
 
-LayoutController.$inject = ['$scope', '$rootScope', '$state', '$cookies', '$http'];
+LayoutController.$inject = ['$scope', '$rootScope', '$state', '$cookies', '$http', 'SERVER'];
 
 export default LayoutController;

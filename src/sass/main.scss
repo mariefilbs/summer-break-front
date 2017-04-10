@@ -137,6 +137,22 @@ a.nav-item.logo {
   border: 1px solid #F3BA3A;
 }
 
+
+.featured-events{
+  display: flex;
+  justify-content: center;
+}
+
+.featured-event-card{
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+  padding: 25px;
+  //margin: 15px;
+  margin-top: -175px;
+  margin-bottom: 30px;
+}
+
 .middle {
   width: 900px;
   height: auto;
@@ -483,11 +499,14 @@ h2 {
   margin-right: -140px;
   text-align: center;
   text-shadow: 1px 1px #355557;
+  border-top: 1px solid lightgrey;
+  padding-top: 25px;
 }
 
 .activity-images-container {
   width: 800px;
   margin-left: 155px;
+  margin-top: 325px;
 }
 
 .activity-box {
