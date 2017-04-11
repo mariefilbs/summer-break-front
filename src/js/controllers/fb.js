@@ -10,11 +10,12 @@ function FBController ($cookies, $state, $stateParams, $http) {
     let myObject = {
       firstName: resp.data.name,
       email: resp.data.email
-    }
+    };
     $cookies.putObject('userInfo', myObject);
-  })
+    $state.go('root.home');
+  });
 
-  $state.go('root.home');
+
 }
 
 FBController.$inject = ['$cookies', '$state', '$stateParams', '$http'];
