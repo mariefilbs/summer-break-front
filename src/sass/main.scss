@@ -390,6 +390,12 @@ h2 {
 }
 //-------
 //login modal
+.modal-background {
+  background-image: url('/images/teens.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
 .modal-close {
     margin-top: 50px;
     z-index: 2;
@@ -432,7 +438,7 @@ h2 {
 .form button {
   text-transform: uppercase;
   outline: 0;
-  background: #85D3DF;
+  background: #1D335F;
   width: 100%;
   border: 0;
   padding: 15px;
