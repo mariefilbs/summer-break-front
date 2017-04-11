@@ -3,14 +3,12 @@ import $ from 'jquery';
 function UserController ($scope, $http, $cookies, $state, SERVER, $stateParams, $rootScope) {
     //console.log($cookies);
 
-    window.fbAsyncInit();
+  $scope.notifications = [];
 
-  //$scope.notifications = [];
-
-  // $scope.removeMsg = (msg) => {
-  //   var removed = $scope.notifications.filter(x => x != msg);
-  //   $scope.notifications = removed;
-  // }
+  $scope.removeMsg = (msg) => {
+    var removed = $scope.notifications.filter(x => x != msg);
+    $scope.notifications = removed;
+  }
 
   $scope.register = (user) => {
     //console.log(user);
