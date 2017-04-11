@@ -8,7 +8,7 @@
 .fix-nav {
   //position: fixed;
   width: 100%;
-  height: 100px;
+  height: 86px;
   font-family: 'Cuprum', sans-serif;
   background-color: #1D335F;
   color: white;
@@ -116,7 +116,7 @@ a.nav-item.logo {
 
 .welcome-fix {
   padding-right: 26px;
-  padding-top: 37px;
+  padding-top: 30px;
   text-shadow: 1px 1px 2px black;
 }
 
@@ -124,17 +124,19 @@ a.nav-item.logo {
   color: white;
 }
 
-.fa.fa-archive {
-  margin-top: 10px;
-}
+// .fa.fa-archive {
+//   margin-top: 9px;
+// }
 
 .fa.fa-archive.archive-fix {
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 #sign-in-out {
   margin: 3px;
   border: 1px solid #F3BA3A;
+  margin-top: 15px;
+  text-shadow: none;
 }
 
 
@@ -145,12 +147,16 @@ a.nav-item.logo {
 
 .featured-event-card{
   width: 200px;
-  height: 100px;
+  height: auto;
   display: inline-block;
   padding: 25px;
   //margin: 15px;
   margin-top: -175px;
   margin-bottom: 30px;
+}
+
+.featured-event-card img {
+  object-fit: contain;
 }
 
 .middle {
@@ -397,8 +403,9 @@ h2 {
 }
 
 .modal-close {
-    margin-top: 50px;
+    margin-top: 80px;
     z-index: 2;
+    background-color: #1D335F;
 }
 
 .login-page {
@@ -510,9 +517,11 @@ h2 {
 }
 
 .activity-images-container {
-  width: 800px;
+  width: 900px;
   margin-left: 155px;
   margin-top: 325px;
+  border-top: 1px solid lightgrey;
+  padding-top:30px;
 }
 
 .activity-box {
@@ -524,6 +533,11 @@ h2 {
   text-align: center;
   margin-left: 50px;
   font-size: 110%;
+}
+
+.activity-box a {
+  font-size: 150%;
+  padding-top: 30px;
 }
 
 .activity-image-container li a {
