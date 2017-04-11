@@ -88,7 +88,7 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
 
 
   $scope.deactivate = () => {
-    $state.go('transparent.home');
+    $state.go('root.home');
   };
 }
 EventController.$inject = ['$scope', '$http', '$state', '$stateParams', '$rootScope', 'SERVER', 'EventService'];

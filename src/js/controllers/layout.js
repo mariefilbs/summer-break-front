@@ -1,10 +1,21 @@
 
 function LayoutController ($scope, $rootScope, $state, $cookies, $http, SERVER) {
   $rootScope.welcome = '';
-  $rootScope.numberOfPending;
+
+  function init () {
+    // EventService.fetchPending().then(resp => { $scope.pendingEvents = resp.data })
+    $http.get(`${SERVER}/activities/all/pending`).then(resp => {
+      $scope.pendingEvents = resp.data;
+      console.log(resp.data.length);
+      $rootScope.numberOfPending = resp.data.length;
+
+    })
+  }
+  init();
 
   $scope.signOut = () => {
     $rootScope.loggedIn = false;
+    $rootScope.userInfo.isAdmin = false;
     $cookies.remove('access-token');
     $cookies.remove('userInfo');
     $http.defaults.headers.common['access-token'] = null;
@@ -38,6 +49,8 @@ function LayoutController ($scope, $rootScope, $state, $cookies, $http, SERVER) 
   })
 
 }
+
+
 
 LayoutController.$inject = ['$scope', '$rootScope', '$state', '$cookies', '$http', 'SERVER'];
 
