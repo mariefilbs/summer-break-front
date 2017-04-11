@@ -19,6 +19,24 @@ function LayoutController ($scope, $rootScope, $state, $cookies, $http, SERVER) 
     $scope.featured = resp.data;
   })
 
+  $scope.allEventsStat = [];
+  $http.get(`${SERVER}/activities`).then(resp => {
+    console.log(resp.data.length);
+    $scope.allEventsStat = resp.data.length;
+  })
+
+  $scope.allUsersStat = [];
+  $http.get(`${SERVER}/users`).then(resp => {
+    console.log(resp.data.length);
+    $scope.allUsersStat = resp.data.length;
+  })
+
+  $scope.allRsvpStat = [];
+  $http.get(`${SERVER}/rsvps`).then(resp => {
+    console.log(resp.data.length);
+    $scope.allRsvpStat = resp.data.length;
+  })
+
 }
 
 LayoutController.$inject = ['$scope', '$rootScope', '$state', '$cookies', '$http', 'SERVER'];
