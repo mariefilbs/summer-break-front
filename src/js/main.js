@@ -13,6 +13,7 @@ import LayoutController from './controllers/layout';
 import EventController from './controllers/events';
 import SelectEventController from './controllers/selectevent';
 import PendingEventsController from './controllers/pendingevents';
+import FBController from './controllers/fb';
 import EventService from './services/event';
 
 angular
@@ -26,4 +27,5 @@ angular
   .controller('EventController', EventController)
   .controller('SelectEventController', SelectEventController)
   .controller('PendingEventsController', PendingEventsController)
+  .controller('FBController', FBController)
   .value('duScrollOffset', 125);
