@@ -1,6 +1,6 @@
 function PendingEventsController ($scope, $http, $state, $rootScope, $stateParams, SERVER, EventService) {
   $scope.pendingEvents = [];
-
+  
 
   function init () {
     // EventService.fetchPending().then(resp => { $scope.pendingEvents = resp.data })

@@ -34,9 +34,7 @@ function UserController ($scope, $http, $cookies, $state, SERVER, $stateParams, 
       $rootScope.userInfo = userInfo;
       console.log(userInfo.firstName);
 
-
-
-      $state.go('transparent.home');
+      $state.go('root.home');
       // console.log($rootScope.welcome);
 
     }).catch(error => {
@@ -45,7 +43,7 @@ function UserController ($scope, $http, $cookies, $state, SERVER, $stateParams, 
   }
 
   $scope.deactivate = () => {
-    $state.go('transparent.home');
+    $state.go('root.home');
   };
 
   $scope.switchForms = () => {

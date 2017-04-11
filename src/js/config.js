@@ -6,17 +6,17 @@ function Config ($stateProvider, $urlRouterProvider) {
     templateUrl: 'templates/root.tpl.html',
     controller: 'LayoutController'
   })
-  .state('transparent', {
-    abstract: true,
-    templateUrl: 'templates/transparent.tpl.html',
-    controller: 'LayoutController'
-  })
-   .state('transparent.home', {
+  // .state('transparent', {
+  //   abstract: true,
+  //   templateUrl: 'templates/transparent.tpl.html',
+  //   controller: 'LayoutController'
+  // })
+   .state('root.home', {
      url: '/home',
      templateUrl: 'templates/landing-page.tpl.html',
      controller: 'LayoutController'
    })
-    .state('transparent.login', {
+    .state('root.login', {
       url: '/users',
       templateUrl: 'templates/login.tpl.html',
       controller: 'UserController'
@@ -26,7 +26,7 @@ function Config ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/aboutus.tpl.html',
       controller: 'LayoutController'
     })
-    .state('transparent.addevent', {
+    .state('root.addevent', {
       url: '/addevent',
       templateUrl: 'templates/addevent.tpl.html',
       controller: 'EventController'

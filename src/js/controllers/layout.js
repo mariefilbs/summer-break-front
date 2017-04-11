@@ -1,7 +1,7 @@
 
 function LayoutController ($scope, $rootScope, $state, $cookies, $http, SERVER) {
   $rootScope.welcome = '';
-
+  $rootScope.numberOfPending;
 
   $scope.signOut = () => {
     $rootScope.loggedIn = false;
