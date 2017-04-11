@@ -21,6 +21,10 @@ function Config ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/login.tpl.html',
       controller: 'UserController'
     })
+    .state('root.fb', {
+      url: '/fb/:token',
+      controller: 'FBController'
+    })
     .state('root.about', {
       url: '/about',
       templateUrl: 'templates/aboutus.tpl.html',
