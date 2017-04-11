@@ -9,12 +9,31 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum|Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Arsenal" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-
   </head>
   <body ng-app='app'>
-    <!---Facebook SDK script---->
-    <div id="fb-root"></div>
     <script>
+    // Okay Facebook.
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1053060318171888',
+        xfbml      : true,
+        version    : 'v2.8'
+      });
+      FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      console.log(js, fjs);
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1053060318171888";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div id="fb-root"></div>
+    <!---Facebook SDK script---->
+    <!-- <script>
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '1053060318171888',
@@ -32,7 +51,7 @@
         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1053060318171888";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-   </script>
+   </script> -->
    <!---------------------------->
 
      <div class="main-content" ui-view></div>

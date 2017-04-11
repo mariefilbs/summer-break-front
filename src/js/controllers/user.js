@@ -3,6 +3,7 @@ import $ from 'jquery';
 function UserController ($scope, $http, $cookies, $state, SERVER, $stateParams, $rootScope) {
     //console.log($cookies);
 
+    window.fbAsyncInit();
 
   //$scope.notifications = [];
 

@@ -79,11 +79,26 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
     }).then($state.reload());
   }
 
+  // $scope.unRsvp = function (isAttending) {
+  //   if (isAttending) {
+  //     isAttending = false;
+  //   } else {
+  //     isAttending = true;
+  //   }
+  // }
+
 
   $scope.liked = (id) => {
     $http.post(`${SERVER}/activities/${id}/likes`).then(resp => {
       //console.log(resp.data);
     }).then($state.reload());
+  }
+
+  $scope.deleteEvent = (id) => {
+    $http.delete(`${SERVER}/activities/${id}`).then(resp => {
+      console.log(resp.data);
+      $state.reload();
+    })
   }
 
 

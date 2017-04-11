@@ -1,4 +1,4 @@
-function PendingEventsController ($scope, $http, $state, $rootScope, $stateParams, SERVER, EventService) {
+function PendingEventsController ($scope, $http, $cookies, $state, $rootScope, $stateParams, SERVER, EventService) {
   $scope.pendingEvents = [];
 
 
@@ -47,9 +47,20 @@ function PendingEventsController ($scope, $http, $state, $rootScope, $stateParam
       $state.reload();
     })
   }
+
+  $scope.signOut = () => {
+    $rootScope.loggedIn = false;
+    $rootScope.userInfo.isAdmin = false;
+    $cookies.remove('access-token');
+    $cookies.remove('userInfo');
+    $http.defaults.headers.common['access-token'] = null;
+
+
+    $state.go('root.home');
+  };
 }
 
 
-PendingEventsController.$inject = ['$scope', '$http', '$state', '$rootScope', '$stateParams', 'SERVER', 'EventService'];
+PendingEventsController.$inject = ['$scope', '$http', '$state', '$cookies', '$rootScope', '$stateParams', 'SERVER', 'EventService'];
 
 export default PendingEventsController;

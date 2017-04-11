@@ -45,7 +45,7 @@ function Config ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/select-event.tpl.html',
       controller: 'SelectEventController'
     })
-    .state('root.pending-tank', {
+    .state('pending-tank', {
       url: '/pending',
       templateUrl: 'templates/pendingevents.tpl.html',
       controller: 'PendingEventsController'
