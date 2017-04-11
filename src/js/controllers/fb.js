@@ -11,7 +11,7 @@ function FBController ($cookies, $state, $stateParams, $http, $rootScope, SERVER
       firstName: resp.data.name,
       email: resp.data.email,
       isAdmin: resp.data.isAdmin,
-      user_id: resp.data.id
+      id: resp.data.id
     };
     $cookies.putObject('userInfo', myObject);
     $rootScope.userInfo = myObject;
