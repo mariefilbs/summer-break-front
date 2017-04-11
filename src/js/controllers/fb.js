@@ -1,4 +1,4 @@
-function FBController ($cookies, $state, $stateParams, $http) {
+function FBController ($cookies, $state, $stateParams, $http, $rootScope) {
 
   let fbtoken = $stateParams.token;
   $cookies.put('access-token', fbtoken);
@@ -9,15 +9,17 @@ function FBController ($cookies, $state, $stateParams, $http) {
     console.log(resp.data);
     let myObject = {
       firstName: resp.data.name,
-      email: resp.data.email
+      email: resp.data.email,
+      isAdmin: resp.data.isAdmin
     };
     $cookies.putObject('userInfo', myObject);
+    $rootScope.userInfo = myObject;
     $state.go('root.home');
   });
 
 
 }
 
-FBController.$inject = ['$cookies', '$state', '$stateParams', '$http'];
+FBController.$inject = ['$cookies', '$state', '$stateParams', '$http', '$rootScope'];
 
 export default FBController;

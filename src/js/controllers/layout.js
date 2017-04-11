@@ -21,7 +21,7 @@ function LayoutController ($scope, $rootScope, $state, $cookies, $http, SERVER) 
     $http.defaults.headers.common['access-token'] = null;
 
 
-    $state.go('transparent.home');
+    $state.go('root.home');
   };
 
   $scope.featured = [];
