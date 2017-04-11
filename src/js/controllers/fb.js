@@ -1,4 +1,4 @@
-function FBController ($stateParams, $state, $cookies, $http) {
+function FBController ($cookies, $state, $stateParams, $http) {
 
   let fbtoken = $stateParams.token;
   $cookies.put('access-token', fbtoken);

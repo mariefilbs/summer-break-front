@@ -79,13 +79,7 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
     }).then($state.reload());
   }
 
-  // $scope.unRsvp = function (isAttending) {
-  //   if (isAttending) {
-  //     isAttending = false;
-  //   } else {
-  //     isAttending = true;
-  //   }
-  // }
+  
 
 
   $scope.liked = (id) => {
