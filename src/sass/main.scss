@@ -148,9 +148,7 @@ a.nav-item.logo {
   height: auto;
   display: inline-block;
   padding: 25px;
-  //margin: 15px;
-  margin-top: -175px;
-  margin-bottom: 30px;
+  margin-top: 50px;
 }
 
 .featured-event-card p {
@@ -162,69 +160,78 @@ a.nav-item.logo {
 }
 
 .middle {
-  width: 900px;
-  height: auto;
-  margin: 187px;
-  margin-top: 15px;
-  border-bottom: 1px solid lightgrey;
-  padding-bottom: 40px;
+  width: 1100px;
+  height: 600px;
+  margin: 25px;
+  margin-left: 100px;
+  margin-top: 55px;
+  border: 2px solid #1D335F;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.welcome-to-us {
-  margin-left: 266px;
-}
+// .welcome-to-us {
+//   margin-left: 266px;
+// }
+//
+// .welcome-to {
+//   font-family: 'Abril Fatface', cursive;
+//   font-size: 410%;
+//   color: #1D335F;
+//   margin-left: -220px;
+// }
+//
+// .to-your {
+//   margin-left: -110px;
+// }
+//
+// .not-so-typical {
+//   margin-left: -115px;
+//   background-color: #F3BA3A;
+// }
+//
+// .mission {
+//   width: 163px;
+//   margin-left: 108px;
+//   margin-top: 45px;
+//   text-align: center;
+//   font-family: 'Arsenal', sans-serif;
+//   color: #1D335F;
+//   font-size: larger;
+//   //border: 0.5px solid #F3BA3A;
+// }
+//
+// .our-mission {
+//   text-decoration: underline;
+//   width: 108%;
+// }
+//
+// .summer-break-middle {
+//   margin-left: -60px;
+//   letter-spacing: 1px;
+//   font-family: 'Abril Fatface', cursive;
+//   font-size: 410%;
+//   color: #1D335F;
+//   margin-left: -220px;
+// }
+//
+// .summer-break {
+//   font-family: 'Arsenal', sans-serif;
+//   font-size: 210%;
+// }
+//
+// .our-mission {
+//   font-size: 150%;
+//   letter-spacing: 3px;
+// }
+.white-stat-container {
+  width: 100%;
+  height: auto;
+  border: 2px solid white;
+  padding: 27px;
+  margin-top: 220px;
 
-.welcome-to {
-  font-family: 'Abril Fatface', cursive;
-  font-size: 410%;
-  color: #1D335F;
-  margin-left: -220px;
-}
-
-.to-your {
-  margin-left: -110px;
-}
-
-.not-so-typical {
-  margin-left: -115px;
-  background-color: #F3BA3A;
-}
-
-.mission {
-  width: 163px;
-  margin-left: 108px;
-  margin-top: 45px;
-  text-align: center;
-  font-family: 'Arsenal', sans-serif;
-  color: #1D335F;
-  font-size: larger;
-  //border: 0.5px solid #F3BA3A;
-}
-
-.our-mission {
-  text-decoration: underline;
-  width: 108%;
-}
-
-.summer-break-middle {
-  margin-left: -60px;
-  letter-spacing: 1px;
-  font-family: 'Abril Fatface', cursive;
-  font-size: 410%;
-  color: #1D335F;
-  margin-left: -220px;
-}
-
-.summer-break {
-  font-family: 'Arsenal', sans-serif;
-  font-size: 210%;
-}
-
-.our-mission {
-  font-size: 150%;
-  letter-spacing: 3px;
 }
 
 .stat-container {
@@ -233,7 +240,7 @@ a.nav-item.logo {
   display: flex;
   justify-content: space-around;
   border: 1px solid grey;
-  padding: 50px;
+  padding: 45px;
   background-color: #1D335F;
 }
 
@@ -554,71 +561,71 @@ h2 {
   color: #EF3B3A;
 }
 
-.activities-title {
-  font-family: 'Cuprum', sans-serif;
-  font-size: 350%;
-  font-weight: bolder;
-  letter-spacing: 14px;
-  color: lightgrey;
-  margin-top: -102px;
-  margin-right: -140px;
-  text-align: center;
-  text-shadow: 1px 1px #355557;
-  border-top: 1px solid lightgrey;
-  padding-top: 25px;
-}
-
-.activity-images-container {
-  width: 900px;
-  margin-left: 155px;
-  margin-top: 78px;
-  border-top: 1px solid lightgrey;
-  padding-top: 43px;
-}
-
-.activity-box {
-  width: 800px;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  margin-left: 50px;
-  font-size: 110%;
-}
-
-.activity-box a {
-  font-size: 150%;
-  padding-top: 30px;
-}
-
-.activity-image-container li a {
-  margin: 5px;
-  font-size: 110%;
-}
-
-.category-images {
-  margin-top: 30px;
-  margin-left: -62px;
-  margin-right: -103px;
-}
-
-.cat-images {
-
-  height: auto;
-  margin: 25px;
-  object-fit: cover;
-}
-
-.cat-images img {
-  width: 450px;
-  border-radius: 5px;
-}
-
-
-.cat-images img:hover {
-  transform: scale(1.1);
-}
+// .activities-title {
+//   font-family: 'Cuprum', sans-serif;
+//   font-size: 350%;
+//   font-weight: bolder;
+//   letter-spacing: 14px;
+//   color: lightgrey;
+//   margin-top: -102px;
+//   margin-right: -140px;
+//   text-align: center;
+//   text-shadow: 1px 1px #355557;
+//   border-top: 1px solid lightgrey;
+//   padding-top: 25px;
+// }
+//
+// .activity-images-container {
+//   width: 900px;
+//   margin-left: 155px;
+//   margin-top: 78px;
+//   border-top: 1px solid lightgrey;
+//   padding-top: 43px;
+// }
+//
+// .activity-box {
+//   width: 800px;
+//   height: auto;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   text-align: center;
+//   margin-left: 50px;
+//   font-size: 110%;
+// }
+//
+// .activity-box a {
+//   font-size: 150%;
+//   padding-top: 30px;
+// }
+//
+// .activity-image-container li a {
+//   margin: 5px;
+//   font-size: 110%;
+// }
+//
+// .category-images {
+//   margin-top: 30px;
+//   margin-left: -62px;
+//   margin-right: -103px;
+// }
+//
+// .cat-images {
+//
+//   height: auto;
+//   margin: 25px;
+//   object-fit: cover;
+// }
+//
+// .cat-images img {
+//   width: 450px;
+//   border-radius: 5px;
+// }
+//
+//
+// .cat-images img:hover {
+//   transform: scale(1.1);
+// }
 
 .main-card {
   align-items: center;
