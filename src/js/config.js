@@ -31,6 +31,11 @@ function Config ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/aboutus.tpl.html',
       controller: 'LayoutController'
     })
+    .state('root.terms', {
+      url:'/terms',
+      templateUrl: 'templates/terms.tpl.html',
+      controller: 'LayoutController'
+    })
     .state('root.addevent', {
       url: '/addevent',
       templateUrl: 'templates/addevent.tpl.html',

@@ -79,13 +79,15 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
     $http.post(`${SERVER}/activities/${id}/likes`).then(resp => {
       //console.log(resp.data);
     }).then($state.reload());
+      // modify the event to have more likes or more rsvps or whatever
+
+
   }
 
   $scope.deleteEvent = (id) => {
     $http.delete(`${SERVER}/activities/${id}`).then(resp => {
       //console.log(resp.data);
-      $state.reload();
-    })
+    }).then($state.reload());
   }
 
 

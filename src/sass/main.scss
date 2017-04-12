@@ -64,6 +64,10 @@ nav.scroll-nav {
   color: #1D335F;
 }
 
+.scroll-nav a:hover {
+  text-decoration: underline;
+}
+
 
 a.nav-item {
   color: white;
@@ -128,6 +132,15 @@ a.nav-item.logo {
 
 .fa.fa-archive.archive-fix {
   margin-top: 25px;
+}
+
+.fa.fa-archive.archive-fix:hover {
+  color: #F3BA3A;
+}
+
+
+.fa.fa-archive:hover {
+  color: #F3BA3A;
 }
 
 .fb-login {
@@ -461,6 +474,14 @@ h2 {
   margin-top: 140px;
 }
 
+.list-event-page a {
+  color: #1D335F;
+}
+
+.list-event-page a:hover {
+  text-decoration: underline;
+}
+
 .general-events {
   //border: 1px solid lightgrey;
   margin: 30px;
@@ -590,11 +611,28 @@ a.button {
   margin: 0px auto;
 }
 
+.add {
+  background-color: #1D335F;
+  color: white;
+}
+
 div.card-content.select-event-content {
   clear: both;
   height: auto;
   z-index: 1;
   margin-top: 50px;
+}
+
+.select-event-media {
+  text-align: center;
+}
+
+.select-event-media a {
+  color: #1D335F;
+}
+
+.select-event-media a:hover {
+  text-decoration: underline;
 }
 
 .select-event-image {
@@ -647,7 +685,20 @@ i.fa.fa-heart {
   height: auto;
   display: flex;
   justify-content: flex-start;
+}
 
+.right-side {
+  margin-top: 63px;
+  border: 1px solid #1D335F;
+  position:relative;
+}
+
+.about-us {
+  text-align: center;
+  color: #1D335F;
+  border: 1px solid white;
+  margin-top: -50px;
+  text-shadow: 1px 1px 1px #F3BA3A;
 }
 
 .right-side {
@@ -659,7 +710,19 @@ i.fa.fa-heart {
   font-size: 200%;
 }
 
-.about-us-img {
+.terms {
+  width: 800px;
+  height: auto;
+  font-size: 90%;
+  margin-left: 200px;
+  padding-top: 130px;
+}
+
+.terms-title {
+  font-weight: bold;
+}
+
+img.about-us-img {
   border-radius: 3px;
   height: 350px;
   width: auto;
@@ -683,6 +746,10 @@ i.fa.fa-heart {
 
 .foot-link a {
   color: #1D335F;
+}
+
+.foot-link a:hover {
+  text-decoration: underline;
 }
 
 .develop a {

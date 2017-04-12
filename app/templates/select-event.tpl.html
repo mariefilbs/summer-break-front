@@ -19,12 +19,13 @@
 
     <div class="content">
       {{ event.description }}
-      <br>
-      {{ event.admissionFee }}
-      <p class="subtitle is-6"> {{ event.contact }}</p>
+      <br></br>
+      Admission Fee: {{ event.admissionFee }}
+      <br></br>
+      <p class="subtitle is-6">Contact: {{ event.contact }}</p>
     </div>
     <a ng-class="{'is-success' : attendingStatus(event.id), 'is-info': !attendingStatus(event.id)}" class="button is-info" ng-click="rsvp(event.id)">RSVP</a>
-    <i class="fa fa-map-marker" aria-hidden="true">Directions</i>
+    <!-- <i class="fa fa-map-marker" aria-hidden="true">Directions</i> -->
 
   </div>
 </div>
@@ -36,7 +37,7 @@
        <div class="comment-box">
        <input type="text" placeholder="Add comment..." ng-model="comment.description"/>
         <div class="modal-buttons">
-          <a class="button is-primary" ng-click="addComment(comment)">Add</a>
+          <a class="button add" ng-click="addComment(comment)">Add</a>
           <a class="button" ng-click="deactivate()">Cancel</a>
         </div>
        </div>
