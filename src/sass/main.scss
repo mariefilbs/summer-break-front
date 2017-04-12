@@ -369,7 +369,7 @@ a.nav-item.logo {
 
 }
 
-.fa.fa-thumbs-o-up {
+.fa.fa-thumbs-o-up.landing {
   color: lightgrey;
   float: right;
   position: absolute;
@@ -394,85 +394,6 @@ a.nav-item.logo {
   text-shadow: 1px 1px 2px #1D335F;
 }
 
-
-// .animate-me {
-//   -webkit-animation: bgcolorchange 7s infinite; /* Chrome, Safari, Opera */
-//   animation: 7s infinite bgcolorchange;
-// }
-// @keyframes bgcolorchange {
-//   0% {
-//     background-color: #F3BA3A;
-//   }
-//   25% {
-//     //background-color: #4FC3A1;
-//     background-color: #F3BA3A;
-//   }
-//   50% {
-//     background-color: #E3206F;
-//   }
-//   75% {
-//     background-color: #85D3DF;
-//   }
-//   100% {
-//     background-color: #2AA38E;
-//   }
-// }
-// /* Chrome, Safari, Opera */
-//  @-webkit-keyframes bgcolorchange {
-//       0%   {background: #F3BA3A;}
-//       25%  {background: #4FC3A1;}
-//       50%  {background: #E3206F;}
-//       75%  {background: #85D3DF;}
-//       100% {background: #2AA38E;}
-//  }
-
-//bouncing arrows
-// .bounce {
-// 	-webkit-animation-name: bounce;
-// 	-moz-animation-name: bounce;
-// 	-o-animation-name: bounce;
-// 	animation-name: bounce;
-// }
-// .animated {
-//   -webkit-animation-fill-mode:both;
-//   -moz-animation-fill-mode:both;
-//   -ms-animation-fill-mode:both;
-//   -o-animation-fill-mode:both;
-//
-//             animation-iteration-count: infinite;
-//        -moz-animation-iteration-count: infinite;
-//     -webkit-animation-iteration-count: infinite;
-//
-//   animation-fill-mode:both;
-//   -webkit-animation-duration:2s;
-//   -moz-animation-duration:2s;
-//   -ms-animation-duration:2s;
-//   -o-animation-duration:2s;
-//   animation-duration:2s;
-// }
-//
-//
-// @-webkit-keyframes bounce {
-// 	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-30px);}
-// 	60% {-webkit-transform: translateY(-15px);}
-// }
-//
-// @-moz-keyframes bounce {
-// 	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
-// 	40% {-moz-transform: translateY(-30px);}
-// 	60% {-moz-transform: translateY(-15px);}
-// }
-//
-// @-o-keyframes bounce {
-// 	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
-// 	40% {-o-transform: translateY(-30px);}
-// 	60% {-o-transform: translateY(-15px);}
-// }
-// @keyframes bounce {
-// 	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-// 	40% {transform: translateY(-30px);}
-// 	60% {transform: translateY(-15px);}
-// }
 
 //summer dashed shadow
 @import url(http://fonts.googleapis.com/css?family=Righteous);
@@ -617,71 +538,6 @@ h2 {
   color: #EF3B3A;
 }
 
-// .activities-title {
-//   font-family: 'Cuprum', sans-serif;
-//   font-size: 350%;
-//   font-weight: bolder;
-//   letter-spacing: 14px;
-//   color: lightgrey;
-//   margin-top: -102px;
-//   margin-right: -140px;
-//   text-align: center;
-//   text-shadow: 1px 1px #355557;
-//   border-top: 1px solid lightgrey;
-//   padding-top: 25px;
-// }
-//
-// .activity-images-container {
-//   width: 900px;
-//   margin-left: 155px;
-//   margin-top: 78px;
-//   border-top: 1px solid lightgrey;
-//   padding-top: 43px;
-// }
-//
-// .activity-box {
-//   width: 800px;
-//   height: auto;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-around;
-//   text-align: center;
-//   margin-left: 50px;
-//   font-size: 110%;
-// }
-//
-// .activity-box a {
-//   font-size: 150%;
-//   padding-top: 30px;
-// }
-//
-// .activity-image-container li a {
-//   margin: 5px;
-//   font-size: 110%;
-// }
-//
-// .category-images {
-//   margin-top: 30px;
-//   margin-left: -62px;
-//   margin-right: -103px;
-// }
-//
-// .cat-images {
-//
-//   height: auto;
-//   margin: 25px;
-//   object-fit: cover;
-// }
-//
-// .cat-images img {
-//   width: 450px;
-//   border-radius: 5px;
-// }
-//
-//
-// .cat-images img:hover {
-//   transform: scale(1.1);
-// }
 
 .main-card {
   align-items: center;
@@ -690,7 +546,6 @@ h2 {
   display: inline-block;
   text-align: center;
 }
-
 
 
 //event css
@@ -890,15 +745,24 @@ i.fa.fa-heart {
 
 }
 
-footer {
-  border: 1.5px solid #ECB438;
-  height: 40px;
+.footer-content {
+  display: flex;
+  align-content: row;
+  justify-content: center;
+  margin-top: -15px;
+  margin-left: 30px;
 }
 
-.kurts-link {
-  color: #ECB438;
+.foot-link {
+  color: #1D335F;
+  font-size: 120%;
+  margin: 15px;
 }
 
-.maries-link {
-  color: #ECB438;
+.foot-link a {
+  color: #1D335F;
+}
+
+.develop a {
+  color: #F3BA3A;
 }
