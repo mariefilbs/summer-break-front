@@ -172,6 +172,14 @@ a.nav-item.logo {
   text-align: center;
 }
 
+.featured-event-card a {
+  color: #1D335F;
+}
+
+.featured-event-card a:hover {
+  text-decoration: underline;
+}
+
 .featured-event-card img {
   object-fit: contain;
 }
@@ -611,7 +619,7 @@ a.button {
   margin: 0px auto;
 }
 
-.add {
+.add-comment {
   background-color: #1D335F;
   color: white;
 }
@@ -720,6 +728,14 @@ i.fa.fa-heart {
 
 .terms-title {
   font-weight: bold;
+}
+
+.contact-admin {
+  border: 1px solid #1D335F;
+  border-radius: 3px;
+  padding: 25px;
+  text-align: center;
+  width: 397px;
 }
 
 img.about-us-img {

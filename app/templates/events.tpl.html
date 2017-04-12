@@ -38,9 +38,9 @@
                   data-show-faces="true">
                 </div> -->
               </a>
-              <a ng-click="liked(general.id)" class="button is-danger">
+              <a ng-hide="!loggedIn" ng-click="liked(general.id)" class="button is-danger">
                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ general.likesnumber }}</a>
-              <a ng-class="{'is-success' : attendingStatus(general.id), 'is-info': !attendingStatus(general.id)}" class="button" ng-click="rsvp(general.id); unRsvp(userInfo.isAttending)">RSVP</a>
+              <a ng-hide="!loggedIn" ng-class="{'is-success' : attendingStatus(general.id), 'is-info': !attendingStatus(general.id)}" class="button" ng-click="rsvp(general.id); unRsvp(userInfo.isAttending)">RSVP</a>
               <span>{{ general.Guestlists.length }} people are going!</span>
             </div>
             <div class="level-right">
@@ -70,9 +70,9 @@
           </div>
           <nav class="level is-mobile">
             <div class="level-left">
-              <a ng-click="liked(vol.id)" class="button is-danger">
+              <a ng-hide="!loggedIn" ng-click="liked(vol.id)" class="button is-danger">
                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ vol.likesnumber }}</a>
-              <a ng-class="{'is-success' : attendingStatus(vol.id), 'is-info': !attendingStatus(vol.id)}" class="button is-info" ng-click="rsvp(vol.id)">RSVP</a>
+              <a ng-hide="!loggedIn" ng-class="{'is-success' : attendingStatus(vol.id), 'is-info': !attendingStatus(vol.id)}" class="button is-info" ng-click="rsvp(vol.id)">RSVP</a>
             <span>{{ vol.Guestlists.length }} people are going!</span>
             </div>
             <div class="level-right">
@@ -102,9 +102,9 @@
           </div>
           <nav class="level is-mobile">
             <div class="level-left">
-              <a ng-click="liked(camp.id)" class="button is-danger">
+              <a ng-hide="!loggedIn" ng-click="liked(camp.id)" class="button is-danger">
                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ camp.likesnumber }}</a>
-              <a ng-class="{'is-success' : attendingStatus(camp.id), 'is-info': !attendingStatus(camp.id)}" class="button is-info" ng-click="rsvp(camp.id)">RSVP</a>
+              <a ng-hide="!loggedIn" ng-class="{'is-success' : attendingStatus(camp.id), 'is-info': !attendingStatus(camp.id)}" class="button is-info" ng-click="rsvp(camp.id)">RSVP</a>
               <span>{{ camp.Guestlists.length }} people are going!</span>
             </div>
             <div class="level-right">
@@ -134,9 +134,9 @@
           </div>
           <nav class="level is-mobile">
             <div class="level-left">
-              <a ng-click="liked(education.id)" class="button is-danger">
+              <a ng-hide="!loggedIn" ng-click="liked(education.id)" class="button is-danger">
                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ education.likesnumber }}</a>
-              <a ng-class="{'is-success' : attendingStatus(education.id), 'is-info': !attendingStatus(education.id)}" class="button is-info" ng-click="rsvp(education.id)">RSVP</a>
+              <a ng-hide="!loggedIn" ng-class="{'is-success' : attendingStatus(education.id), 'is-info': !attendingStatus(education.id)}" class="button is-info" ng-click="rsvp(education.id)">RSVP</a>
               <span>{{ education.Guestlists.length }} people are going!</span>
             </div>
             <div class="level-right">
@@ -166,9 +166,9 @@
           </div>
           <nav class="level is-mobile">
             <div class="level-left">
-              <a ng-click="liked(job.id)" class="button is-danger">
+              <a ng-hide="!loggedIn" ng-click="liked(job.id)" class="button is-danger">
                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ job.likesnumber }}</a>
-              <a ng-class="{'is-success' : attendingStatus(job.id), 'is-info': !attendingStatus(job.id)}" class="button is-info" ng-click="rsvp(job.id)" >Interested</a>
+              <a ng-hide="!loggedIn" ng-class="{'is-success' : attendingStatus(job.id), 'is-info': !attendingStatus(job.id)}" class="button is-info" ng-click="rsvp(job.id)" >Interested</a>
               <span>{{ job.Guestlists.length }} people are interested!</span>
             </div>
             <div class="level-right">
