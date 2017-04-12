@@ -13,7 +13,6 @@
   background-color: #1D335F;
   color: white;
   text-shadow: 1px 1px 2px black;
-
   //border: 1px solid black;
 }
 
@@ -123,10 +122,6 @@ a.nav-item.logo {
   color: white;
 }
 
-// .fa.fa-archive {
-//   margin-top: 9px;
-// }
-
 .fa.fa-archive.archive-fix {
   margin-top: 25px;
 }
@@ -167,9 +162,24 @@ a.nav-item.logo {
   margin-left: 100px;
   margin-top: 55px;
   border: 2px solid #1D335F;
+  border-radius: 3px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+}
+
+.most-popular {
+  position: absolute;
+  color: #F3BA3A;
+  font-size: 270%;
+  background-color: white;
+  border: 1px solid white;
+  align-self: center;
+  letter-spacing: 4px;
+  padding: 15px;
+  margin-left: -13px;
+  margin-top: -45px;
 }
 
 // .welcome-to-us {
@@ -243,6 +253,7 @@ a.nav-item.logo {
   border: 1px solid grey;
   padding: 45px;
   background-color: #1D335F;
+  border-radius: 3px;
 }
 
 .stat-box {
@@ -334,18 +345,19 @@ a.nav-item.logo {
 #who-we-are {
   color: #1D335F;
   font-size: 275%;
-  margin-left: 152px;
+  margin-left: 167px;
   margin-top: 15px;
   width: 250px;
 }
 
 .mission-statement{
   color: #1D335F;
-  margin-right: 471px;
+  margin-right: 463px;
   font-size: 120%;
   margin-top: -62px;
   //display: inline-block;
   float: right;
+  font-weight: bold;
 }
 
 .mission-statement-2 {
@@ -353,6 +365,17 @@ a.nav-item.logo {
   margin-left: 443px;
   margin-top: -35px;
   font-size: 120%;
+  font-weight: bold;
+
+}
+
+.fa.fa-thumbs-o-up {
+  color: lightgrey;
+  float: right;
+  position: absolute;
+  margin-left: 920px;
+  margin-top: -70px;
+  transform:rotate(15deg);
 }
 
 .landing {
