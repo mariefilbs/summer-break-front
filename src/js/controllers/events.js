@@ -41,7 +41,7 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
 
     let googleMapsHTML = `
         <p class="map">
-          <iframe src="https://www.google.com/maps/d/embed?mid=1fCTiwFyox-v_GHKcbrfCBFiLmQs" width="640" height="480"></iframe>
+          <iframe src="https://www.google.com/maps/d/embed?mid=1fCTiwFyox-v_GHKcbrfCBFiLmQs" width="600" height="400"></iframe>
         </p>
     `;
 
@@ -83,7 +83,7 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
 
   $scope.deleteEvent = (id) => {
     $http.delete(`${SERVER}/activities/${id}`).then(resp => {
-      console.log(resp.data);
+      //console.log(resp.data);
       $state.reload();
     })
   }

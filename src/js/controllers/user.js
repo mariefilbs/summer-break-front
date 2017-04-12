@@ -14,6 +14,8 @@ function UserController ($scope, $http, $cookies, $state, SERVER, $stateParams, 
     //console.log(user);
     $http.post(`${SERVER}/users`, user).then(resp => {
       $state.reload();
+      var message = `Thanks for registering, ${resp.data.firstName}! Please login.`;
+ +    $scope.notifications.push(message);
     }).catch(error => {
     console.log(error);
     });

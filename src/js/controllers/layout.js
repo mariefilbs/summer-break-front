@@ -6,7 +6,7 @@ function LayoutController ($scope, $rootScope, $state, $cookies, $http, SERVER) 
     // EventService.fetchPending().then(resp => { $scope.pendingEvents = resp.data })
     $http.get(`${SERVER}/activities/all/pending`).then(resp => {
       $scope.pendingEvents = resp.data;
-      console.log(resp.data.length);
+      //console.log(resp.data.length);
       $rootScope.numberOfPending = resp.data.length;
 
     })
@@ -24,25 +24,25 @@ function LayoutController ($scope, $rootScope, $state, $cookies, $http, SERVER) 
 
   $scope.featured = [];
   $http.get(`${SERVER}/activities/all/feature`).then(resp => {
-    console.log(resp.data);
+    //console.log(resp.data);
     $scope.featured = resp.data;
   })
 
   $scope.allEventsStat = [];
   $http.get(`${SERVER}/activities`).then(resp => {
-    console.log(resp.data.length);
+    //console.log(resp.data.length);
     $scope.allEventsStat = resp.data.length;
   })
 
   $scope.allUsersStat = [];
   $http.get(`${SERVER}/users`).then(resp => {
-    console.log(resp.data.length);
+    //console.log(resp.data.length);
     $scope.allUsersStat = resp.data.length;
   })
 
   $scope.allRsvpStat = [];
   $http.get(`${SERVER}/rsvps`).then(resp => {
-    console.log(resp.data.length);
+    //console.log(resp.data.length);
     $scope.allRsvpStat = resp.data.length;
   })
 

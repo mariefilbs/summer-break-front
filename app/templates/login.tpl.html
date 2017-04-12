@@ -17,7 +17,7 @@
     <!--------------------------------->
     <form class="login-form css-form" novalidate ng-submit="login(signin)">
       <!---new user notification--------->
-           <div ng-repeat="msg in notifications" class="pop-up-new-user notification is-primary">
+           <div ng-repeat="msg in notifications" class="pop-up-new-user notification">
             <button ng-click="removeMsg(msg)"
                   class="delete"></button>
                   <p class="content">
@@ -29,7 +29,8 @@
       <input type="password" placeholder="password" ng-model="signin.password" required/>
       <button>login</button>
       <p class="message">Not registered? <a ng-click="switchForms()">Create an account</a></p>
-      <a href="https://rocky-crag-27614.herokuapp.com/auth/facebook">
+      <a class="fb-login" href="https://rocky-crag-27614.herokuapp.com/auth/facebook">
+        <i class="fa fa-facebook-official" aria-hidden="true"></i>
         LOGIN WITH FACEBOOK
         <!-- <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div> -->
       </a>
