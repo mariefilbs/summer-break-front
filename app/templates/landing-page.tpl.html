@@ -1,31 +1,39 @@
-
+<div class="landing-content">
 <!---landing page---------------------------------------------------------->
-  <div class="landing-container animate-me fix-landing">
+
+  <div class="landing-box">
+    <div class="landing-container animate-me fix-landing"></div>
+    <div class="who-we-are-banner">
+      <div id="who-we-are">WHO ARE WE?</div>
+      <div class="mission-statement">A parent (and teen) approved website that offers opportunities</div>
+      <p class="mission-statement-2"> for teens in the Greater Atlanta area during the summer.</p>
+      <i class="fa fa-thumbs-o-up fa-5x landing" aria-hidden="true"></i>
+    </div>
   </div>
+
 <!------------------------------------------------------------------------->
 <!-----welcome-about-us---------------------------->
 <div class="middle">
-  <div class="welcome-to-us">
+  <div class="most-popular">MOST POPULAR EVENTS</div>
+  <!-- <div class="welcome-to-us">
     <div class="welcome-to">Welcome</div>
   <div class="container middle-saying">
     <div class="summer-break to-your"> to your </div>
     <div class="summer-break not-so-typical tag">not-so-typical</div>
    <div class="summer-break-middle">Summer Break</div>
   </div>
- </div>
+ </div> -->
  <!------mission------------->
- <div class="mission container">
+ <!-- <div class="mission container">
    <div class="our-mission">Our Mission:</div>
    <div class="mission-statement"> To facilitate and encourage parent-approved opportunites for teens in the Greater Atlanta area during the summer.</div>
- </div>
+ </div> -->
  <!-------------------------->
-</div>
+
 <!------------------------------------------------->
 
 <!---featured events--------->
-<div class="featured-title">
-<div class="most-popular">Most Popular Events:</div>
-</div>
+
 
 <div class="featured-events">
   <div class="featured-event-card" ng-repeat="event in featured">
@@ -36,57 +44,28 @@
    <div class="media-content">
         <p class="is-small">{{event.title}}</p>
     </div>
+   </div>
   </div>
- </div>
  </div>
 
  <!-----stat count------------->
-<div class="stat-container">
-  <div class="stat-box"><span class="stat-number">{{allEventsStat}}</span><span> total opportunities!</span></div>
-  <div class="stat-box"><span class="stat-number">{{allUsersStat}}</span><span> total users!</span></div>
-  <div class="stat-box"><span class="stat-number">{{allRsvpStat}}</span><span> events being attended!</span></div>
-</div>
- <!---------------------------->
-
-<!--------------------------->
-<!---Activities------------->
-<div class="activity-images-container">
-  <!-- <div class="activities-title is-offset-one-quarter">ACTIVITIES</div> -->
-    <div class="activity-box">
-      <ul class="activity-box is-offset-one-quarter">
-        <li class="is-active"><a class="section-1" href="#!/events">General Events</a></li>
-        <li><a class="section-2" href="#!/events">Volunteer</a></li>
-        <li><a class="section-3" href="#!/events">Summer Camps</a></li>
-        <li><a class="section-4" href="#!/events">Educational</a></li>
-        <li><a class="section-5" href="#!/events">Jobs</a></li>
-      </ul>
+ <div class="white-stat-container">
+    <div class="stat-container">
+      <div class="stat-box"><span class="stat-number">{{allEventsStat}}</span><span> total opportunities!</span></div>
+      <div class="stat-box"><span class="stat-number">{{allUsersStat}}</span><span> total users!</span></div>
+      <div class="stat-box"><span class="stat-number">{{allRsvpStat}}</span><span> events being attended!</span></div>
     </div>
-  <div class="category-images">
- <div class="cat-images-box columns">
-      <div class="cat-images column is-paddingless">
-          <img src="/images/event.jpg">
-      </div>
-      <div class="cat-images column is-paddingless">
-          <img src="/images/volunteer.jpg">
-      </div>
-      <div class="cat-images column is-paddingless">
-          <img src="/images/camping.jpg">
-      </div>
-    </div>
-
- <div class="cat-images-box columns">
-      <div class="cat-images column is-paddingless">
-          <img src="/images/educational.jpg">
-      </div>
-      <div class="cat-images column is-paddingless">
-          <img src="/images/work.jpg">
-      </div>
-      <!-- <div class="cat-images column is-paddingless">
-          <img src="/images/calendar.jpg">
-      </div> -->
   </div>
+ <!---------------------------->
 </div>
-<!-------------------------->
+<!--------------------------->
+<!---footer notes------------->
+<div class="footer-content">
+  <div class="foot-link"><a href="#!/about">Contact Us</a></div>
+  <div class="foot-link"><a href="#">Terms and Conditions</a></div>
+  <div class="foot-link develop">Site developed by <a href="https://www.linkedin.com/in/rkwyckoff/">Kurt Wyckoff</a> and <a href="https://github.com/mariefilbs"> Marie Filbey</a>.</div>
+</div>
 
+</div>
 
 <div class="details" ui-view></div>

@@ -54,8 +54,6 @@ function PendingEventsController ($scope, $http, $cookies, $state, $rootScope, $
     $cookies.remove('access-token');
     $cookies.remove('userInfo');
     $http.defaults.headers.common['access-token'] = null;
-
-
     $state.go('root.home');
   };
 }

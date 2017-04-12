@@ -13,7 +13,6 @@
   background-color: #1D335F;
   color: white;
   text-shadow: 1px 1px 2px black;
-
   //border: 1px solid black;
 }
 
@@ -98,6 +97,7 @@ a.nav-item.logo {
 
 .summer {
   font-family: 'Lobster', cursive;
+  text-shadow: 2px 1px 1px #F3BA3A;
 }
 
 .break {
@@ -122,10 +122,6 @@ a.nav-item.logo {
   color: white;
 }
 
-// .fa.fa-archive {
-//   margin-top: 9px;
-// }
-
 .fa.fa-archive.archive-fix {
   margin-top: 25px;
 }
@@ -148,9 +144,7 @@ a.nav-item.logo {
   height: auto;
   display: inline-block;
   padding: 25px;
-  //margin: 15px;
-  margin-top: -175px;
-  margin-bottom: 30px;
+  margin-top: 50px;
 }
 
 .featured-event-card p {
@@ -162,69 +156,93 @@ a.nav-item.logo {
 }
 
 .middle {
-  width: 900px;
-  height: auto;
-  margin: 187px;
-  margin-top: 15px;
-  border-bottom: 1px solid lightgrey;
-  padding-bottom: 40px;
+  width: 1100px;
+  height: 600px;
+  margin: 25px;
+  margin-left: 100px;
+  margin-top: 55px;
+  border: 2px solid #1D335F;
+  border-radius: 3px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 
-.welcome-to-us {
-  margin-left: 266px;
+.most-popular {
+  position: absolute;
+  color: #F3BA3A;
+  font-size: 270%;
+  background-color: white;
+  border: 1px solid white;
+  align-self: center;
+  letter-spacing: 4px;
+  padding: 15px;
+  margin-left: -13px;
+  margin-top: -45px;
 }
 
-.welcome-to {
-  font-family: 'Abril Fatface', cursive;
-  font-size: 410%;
-  color: #1D335F;
-  margin-left: -220px;
-}
+// .welcome-to-us {
+//   margin-left: 266px;
+// }
+//
+// .welcome-to {
+//   font-family: 'Abril Fatface', cursive;
+//   font-size: 410%;
+//   color: #1D335F;
+//   margin-left: -220px;
+// }
+//
+// .to-your {
+//   margin-left: -110px;
+// }
+//
+// .not-so-typical {
+//   margin-left: -115px;
+//   background-color: #F3BA3A;
+// }
+//
+// .mission {
+//   width: 163px;
+//   margin-left: 108px;
+//   margin-top: 45px;
+//   text-align: center;
+//   font-family: 'Arsenal', sans-serif;
+//   color: #1D335F;
+//   font-size: larger;
+//   //border: 0.5px solid #F3BA3A;
+// }
+//
+// .our-mission {
+//   text-decoration: underline;
+//   width: 108%;
+// }
+//
+// .summer-break-middle {
+//   margin-left: -60px;
+//   letter-spacing: 1px;
+//   font-family: 'Abril Fatface', cursive;
+//   font-size: 410%;
+//   color: #1D335F;
+//   margin-left: -220px;
+// }
+//
+// .summer-break {
+//   font-family: 'Arsenal', sans-serif;
+//   font-size: 210%;
+// }
+//
+// .our-mission {
+//   font-size: 150%;
+//   letter-spacing: 3px;
+// }
+.white-stat-container {
+  width: 100%;
+  height: auto;
+  border: 2px solid white;
+  padding: 27px;
+  margin-top: 220px;
 
-.to-your {
-  margin-left: -110px;
-}
-
-.not-so-typical {
-  margin-left: -115px;
-  background-color: #F3BA3A;
-}
-
-.mission {
-  width: 163px;
-  margin-left: 108px;
-  margin-top: 45px;
-  text-align: center;
-  font-family: 'Arsenal', sans-serif;
-  color: #1D335F;
-  font-size: larger;
-  //border: 0.5px solid #F3BA3A;
-}
-
-.our-mission {
-  text-decoration: underline;
-  width: 108%;
-}
-
-.summer-break-middle {
-  margin-left: -60px;
-  letter-spacing: 1px;
-  font-family: 'Abril Fatface', cursive;
-  font-size: 410%;
-  color: #1D335F;
-  margin-left: -220px;
-}
-
-.summer-break {
-  font-family: 'Arsenal', sans-serif;
-  font-size: 210%;
-}
-
-.our-mission {
-  font-size: 150%;
-  letter-spacing: 3px;
 }
 
 .stat-container {
@@ -233,8 +251,9 @@ a.nav-item.logo {
   display: flex;
   justify-content: space-around;
   border: 1px solid grey;
-  padding: 50px;
+  padding: 45px;
   background-color: #1D335F;
+  border-radius: 3px;
 }
 
 .stat-box {
@@ -290,16 +309,73 @@ a.nav-item.logo {
   color: #2AA38E;
 }
 
+.landing-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .landing-container {
   position: relative;
   height: 650px;
-  display: flex;
-
+  // display: flex;
   background-image: url('/images/teens.jpg');
   background-position: center;
   background-size: cover;
-  padding-right: 154px;
+  margin-right: -55px;
   //border: 1px solid black;
+}
+
+.who-we-are-banner {
+  height: 90px;
+  width: 110%;
+  opacity: 0.8;
+  background-color: white;
+  margin-top: -150px;
+  //margin-left: 5px;
+  position: absolute;
+  diplay: flex;
+  align-content: row;
+  //justify-content: center;
+  //align-items: center;
+  display: inline-block;
+}
+
+#who-we-are {
+  color: #1D335F;
+  font-size: 275%;
+  margin-left: 167px;
+  margin-top: 15px;
+  width: 250px;
+}
+
+.mission-statement{
+  color: #1D335F;
+  margin-right: 463px;
+  font-size: 120%;
+  margin-top: -62px;
+  //display: inline-block;
+  float: right;
+  font-weight: bold;
+}
+
+.mission-statement-2 {
+  color: #1D335F;
+  margin-left: 443px;
+  margin-top: -35px;
+  font-size: 120%;
+  font-weight: bold;
+
+}
+
+.fa.fa-thumbs-o-up.landing {
+  color: lightgrey;
+  float: right;
+  position: absolute;
+  margin-left: 920px;
+  margin-top: -70px;
+  transform:rotate(15deg);
 }
 
 .landing {
@@ -318,98 +394,6 @@ a.nav-item.logo {
   text-shadow: 1px 1px 2px #1D335F;
 }
 
-i.fa.fa-angle-double-down {
-  color: white;
-  font-size: 400%;
-  align-self: flex-end;
-  padding-left: 185px;
-
-}
-
-i.fa.fa-calendar:before {
-  margin-top: 19px;
-  margin-left: -7px;
-  position: absolute;
-}
-
-// .animate-me {
-//   -webkit-animation: bgcolorchange 7s infinite; /* Chrome, Safari, Opera */
-//   animation: 7s infinite bgcolorchange;
-// }
-// @keyframes bgcolorchange {
-//   0% {
-//     background-color: #F3BA3A;
-//   }
-//   25% {
-//     //background-color: #4FC3A1;
-//     background-color: #F3BA3A;
-//   }
-//   50% {
-//     background-color: #E3206F;
-//   }
-//   75% {
-//     background-color: #85D3DF;
-//   }
-//   100% {
-//     background-color: #2AA38E;
-//   }
-// }
-// /* Chrome, Safari, Opera */
-//  @-webkit-keyframes bgcolorchange {
-//       0%   {background: #F3BA3A;}
-//       25%  {background: #4FC3A1;}
-//       50%  {background: #E3206F;}
-//       75%  {background: #85D3DF;}
-//       100% {background: #2AA38E;}
-//  }
-
-//bouncing arrows
-.bounce {
-	-webkit-animation-name: bounce;
-	-moz-animation-name: bounce;
-	-o-animation-name: bounce;
-	animation-name: bounce;
-}
-.animated {
-  -webkit-animation-fill-mode:both;
-  -moz-animation-fill-mode:both;
-  -ms-animation-fill-mode:both;
-  -o-animation-fill-mode:both;
-
-            animation-iteration-count: infinite;
-       -moz-animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
-
-  animation-fill-mode:both;
-  -webkit-animation-duration:2s;
-  -moz-animation-duration:2s;
-  -ms-animation-duration:2s;
-  -o-animation-duration:2s;
-  animation-duration:2s;
-}
-
-
-@-webkit-keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	40% {-webkit-transform: translateY(-30px);}
-	60% {-webkit-transform: translateY(-15px);}
-}
-
-@-moz-keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
-	40% {-moz-transform: translateY(-30px);}
-	60% {-moz-transform: translateY(-15px);}
-}
-
-@-o-keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
-	40% {-o-transform: translateY(-30px);}
-	60% {-o-transform: translateY(-15px);}
-}
-@keyframes bounce {
-	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	40% {transform: translateY(-30px);}
-	60% {transform: translateY(-15px);}
-}
 
 //summer dashed shadow
 @import url(http://fonts.googleapis.com/css?family=Righteous);
@@ -554,71 +538,6 @@ h2 {
   color: #EF3B3A;
 }
 
-.activities-title {
-  font-family: 'Cuprum', sans-serif;
-  font-size: 350%;
-  font-weight: bolder;
-  letter-spacing: 14px;
-  color: lightgrey;
-  margin-top: -102px;
-  margin-right: -140px;
-  text-align: center;
-  text-shadow: 1px 1px #355557;
-  border-top: 1px solid lightgrey;
-  padding-top: 25px;
-}
-
-.activity-images-container {
-  width: 900px;
-  margin-left: 155px;
-  margin-top: 78px;
-  border-top: 1px solid lightgrey;
-  padding-top: 43px;
-}
-
-.activity-box {
-  width: 800px;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  margin-left: 50px;
-  font-size: 110%;
-}
-
-.activity-box a {
-  font-size: 150%;
-  padding-top: 30px;
-}
-
-.activity-image-container li a {
-  margin: 5px;
-  font-size: 110%;
-}
-
-.category-images {
-  margin-top: 30px;
-  margin-left: -62px;
-  margin-right: -103px;
-}
-
-.cat-images {
-
-  height: auto;
-  margin: 25px;
-  object-fit: cover;
-}
-
-.cat-images img {
-  width: 450px;
-  border-radius: 5px;
-}
-
-
-.cat-images img:hover {
-  transform: scale(1.1);
-}
 
 .main-card {
   align-items: center;
@@ -627,7 +546,6 @@ h2 {
   display: inline-block;
   text-align: center;
 }
-
 
 
 //event css
@@ -819,11 +737,6 @@ i.fa.fa-heart {
   font-size: 200%;
 }
 
-.who-we-are {
-  margin-bottom: -10px;
-  font-size: 90%;
-}
-
 .about-us-img {
   border-radius: 5px;
   height: 350px;
@@ -832,15 +745,24 @@ i.fa.fa-heart {
 
 }
 
-footer {
-  border: 1.5px solid #ECB438;
-  height: 40px;
+.footer-content {
+  display: flex;
+  align-content: row;
+  justify-content: center;
+  margin-top: -15px;
+  margin-left: 30px;
 }
 
-.kurts-link {
-  color: #ECB438;
+.foot-link {
+  color: #1D335F;
+  font-size: 120%;
+  margin: 15px;
 }
 
-.maries-link {
-  color: #ECB438;
+.foot-link a {
+  color: #1D335F;
+}
+
+.develop a {
+  color: #F3BA3A;
 }
