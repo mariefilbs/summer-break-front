@@ -59,13 +59,6 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
     }).length;
   }
 
-  // $scope.getAttendees = (id) => {
-  //   return $http.get(`${SERVER}/activities/${id}/rsvp`).then(resp => {
-  //     console.log(resp.data)
-  //     return resp.data.length
-  //   })
-  // }
-
   $scope.create = (data) => {
     $http.post(`${SERVER}/activities`, data).then(resp => {
       $state.go('root.events');
@@ -79,7 +72,7 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
     }).then($state.reload());
   }
 
-  
+
 
 
   $scope.liked = (id) => {

@@ -15,14 +15,12 @@
 </span>
 
 <!-- This "nav-menu" is hidden on mobile -->
-<!-- Add the modifier "is-active" to display it on mobile -->
-<div class="nav-center nav-menu">
-  <a href="#!/home" class="nav-item">Home</a>
-  <a href="#!/about" class="nav-item">About</a>
-  <a href="#!/addevent" class="nav-item" ng-hide="!loggedIn">Add an Event</a>
-  <a href="#!/events" class="nav-item">Events</a>
-</div>
+<!-- Add the modifier "is-active" to dilinksplay it on mobile -->
 <div class="nav-right nav-menu">
+  <a href="#!/home" class="nav-item link">Home</a>
+  <a href="#!/about" class="nav-item link">About</a>
+  <a href="#!/addevent" class="nav-item link" ng-hide="!loggedIn">Add an Event</a>
+  <a href="#!/events" class="nav-item link">Events</a>
   <span ng-hide="!loggedIn" class="welcome-fix">Welcome, {{ userInfo.firstName }}!</span>
   <a href="#!/pending" ng-hide="!userInfo.isAdmin" class="nav-item"><span class="holding-tank-number">{{ numberOfPending }}</span><i class="fa fa-archive archive-fix" aria-hidden="true"></i></a>
 

@@ -67,8 +67,7 @@ nav.scroll-nav {
 
 a.nav-item {
   color: white;
-  //font-size: 113%;
-
+  font-size: larger;
 }
 
 .top-nav-item {
@@ -80,11 +79,6 @@ a.nav-item:hover {
   color: #F3BA3A;
 }
 
-.nav-center {
-  margin-right: -285.5px;
-  text-shadow: 1px 1px 2px black;
-}
-
 a.button {
   margin-top: 11px;
   margin: 3px;
@@ -92,11 +86,14 @@ a.button {
 
 .nav-right {
   align-items: flex-start;
+  .link {
+    padding-top: 28px;
+  }
 }
 
 
 a.nav-item.logo {
-  font-size: 460%;
+  font-size: 329%;
 }
 
 .summer {
@@ -618,6 +615,7 @@ h2 {
   border-radius: 5px;
 }
 
+
 .cat-images img:hover {
   transform: scale(1.1);
 }
@@ -741,6 +739,7 @@ a.button {
 
 .rsvp-list a {
   color: #1D335F;
+  //color: #85D3DF;
 }
 
 //select-event css
