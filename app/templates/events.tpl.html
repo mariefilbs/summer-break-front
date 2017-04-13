@@ -41,6 +41,7 @@
               <a ng-hide="!loggedIn" ng-click="liked(general.id)" class="button is-fbblue">
                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ general.likesnumber }}</a>
               <a ng-hide="!loggedIn" ng-class="{'is-success' : attendingStatus(general.id), 'is-grey': !attendingStatus(general.id)}" class="button is-grey" ng-click="rsvp(general.id); unRsvp(userInfo.isAttending)">RSVP</a>
+              <span class="you-and-guests" ng-hide="!attendingStatus(general.id)">You and &nbsp</span>
               <span>{{ general.Guestlists.length }} people are going!</span>
             </div>
             <div class="level-right">
@@ -73,6 +74,7 @@
               <a ng-hide="!loggedIn" ng-click="liked(vol.id)" class="button is-fbblue">
                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ vol.likesnumber }}</a>
               <a ng-hide="!loggedIn" ng-class="{'is-success' : attendingStatus(vol.id), 'is-grey': !attendingStatus(vol.id)}" class="button is-grey" ng-click="rsvp(vol.id)">RSVP</a>
+            <span class="you-and-guests" ng-hide="!attendingStatus(vol.id)">You and &nbsp</span>
             <span>{{ vol.Guestlists.length }} people are going!</span>
             </div>
             <div class="level-right">
@@ -105,6 +107,7 @@
               <a ng-hide="!loggedIn" ng-click="liked(camp.id)" class="button is-fbblue">
                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ camp.likesnumber }}</a>
               <a ng-hide="!loggedIn" ng-class="{'is-success' : attendingStatus(camp.id), 'is-grey': !attendingStatus(camp.id)}" class="button is-grey" ng-click="rsvp(camp.id)">RSVP</a>
+              <span class="you-and-guests" ng-hide="!attendingStatus(camp.id)">You and &nbsp</span>
               <span>{{ camp.Guestlists.length }} people are going!</span>
             </div>
             <div class="level-right">
@@ -137,6 +140,7 @@
               <a ng-hide="!loggedIn" ng-click="liked(education.id)" class="button is-fbblue">
                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ education.likesnumber }}</a>
               <a ng-hide="!loggedIn" ng-class="{'is-success' : attendingStatus(education.id), 'is-grey': !attendingStatus(education.id)}" class="button is-grey" ng-click="rsvp(education.id)">RSVP</a>
+              <span class="you-and-guests" ng-hide="!attendingStatus(education.id)">You and &nbsp</span>
               <span>{{ education.Guestlists.length }} people are going!</span>
             </div>
             <div class="level-right">
@@ -169,6 +173,7 @@
               <a ng-hide="!loggedIn" ng-click="liked(job.id)" class="button is-fbblue">
                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> &nbsp {{ job.likesnumber }}</a>
               <a ng-hide="!loggedIn" ng-class="{'is-success' : attendingStatus(job.id), 'is-grey': !attendingStatus(job.id)}" class="button is-grey" ng-click="rsvp(job.id)" >Interested</a>
+              <span class="you-and-guests" ng-hide="!attendingStatus(job.id)">You and &nbsp</span>
               <span>{{ job.Guestlists.length }} people are interested!</span>
             </div>
             <div class="level-right">
