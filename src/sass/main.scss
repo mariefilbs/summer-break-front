@@ -482,8 +482,8 @@ h2 {
   margin-top: 140px;
 }
 
-.list-event-page a {
-  color: #1D335F;
+.list-event-page  {
+  //color: #1D335F;
 }
 
 .list-event-page a:hover {
@@ -493,6 +493,10 @@ h2 {
 .general-events {
   //border: 1px solid lightgrey;
   margin: 30px;
+}
+
+a.general-website {
+  color: #1D335F;
 }
 
 .general-events-title {
@@ -584,6 +588,11 @@ a.button {
 
 .is-grey {
   background-color: #9BA3A6;
+}
+
+.is-fbblue {
+  background-color: #3B5998;
+  color: white;
 }
 
 .list-user-events {
