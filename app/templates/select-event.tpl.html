@@ -24,13 +24,38 @@
       <br></br>
       <p class="subtitle is-6">Contact: {{ event.contact }}</p>
     </div>
-    <a ng-class="{'is-success' : attendingStatus(event.id), 'is-info': !attendingStatus(event.id)}" class="button is-info" ng-click="rsvp(event.id)">RSVP</a>
+    <!-- <a ng-class="{'is-success' : attendingStatus(event.id), 'is-info': !attendingStatus(event.id)}" class="button is-info" ng-click="rsvp(event.id)">RSVP</a> -->
     <!-- <i class="fa fa-map-marker" aria-hidden="true">Directions</i> -->
 
   </div>
 </div>
   <footer class="modal-card-foot" ng-hide="!loggedIn">
-        <div class="comments">
+    <article class="media">
+  <div class="media-content">
+    <div class="field">
+      <p class="control">
+        <textarea class="textarea" placeholder="Add a comment..."></textarea>
+      </p>
+    </div>
+    <nav class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <a class="button">Submit</a>
+          <a class="button" ng-click="deactivate()">Cancel</a>
+          <!--ADD? or POST??----->
+        </div>
+
+      </div>
+      <div class="level-right ">
+        <div class="level-item">
+          <a ng-class="{'is-success' : attendingStatus(event.id), 'is-grey': !attendingStatus(event.id)}" class="button is-grey" ng-click="rsvp(event.id)">RSVP</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</article>
+
+        <!-- <div class="comments">
          <p ng-repeat="comment in comments"><span class="username-in-modal">{{ comment.User.firstName}} {{ comment.User.lastName }}</span>: {{ comment.description }}</p>
          <p>{{ liveComment.description }}</p>
        </div>
@@ -40,7 +65,7 @@
           <a class="button add-comment" ng-click="addComment(comment)">Add</a>
           <a class="button" ng-click="deactivate()">Cancel</a>
         </div>
-       </div>
+       </div> -->
     </footer>
   <button class="modal-close" ng-click="deactivate()"></button>
  </div>
