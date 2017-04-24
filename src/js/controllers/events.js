@@ -17,7 +17,7 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
   function init () {
     $http.get(`${SERVER}/activities/all/live`).then(resp => {
       $scope.activities = resp.data;
-      console.log(resp.data);
+
 
       $scope.generalEvents = $scope.activities.filter((data) => {return data.category === 'generalEvent';});
       $scope.volunteer = $scope.activities.filter((data) => {return data.category === 'volunteer';});
@@ -35,9 +35,6 @@ function EventController ($scope, $http, $state, $stateParams, $rootScope, SERVE
 
     });
 
-    // $http.get(`${SERVER}/activities/${id}/rsvp`).then(resp => {
-    //      console.log(resp.data)
-    // })
 
     let googleMapsHTML = `
         <p class="map">

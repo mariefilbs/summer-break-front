@@ -6,7 +6,7 @@ function PendingEventsController ($scope, $http, $cookies, $state, $rootScope, $
     // EventService.fetchPending().then(resp => { $scope.pendingEvents = resp.data })
     $http.get(`${SERVER}/activities/all/pending`).then(resp => {
       $scope.pendingEvents = resp.data;
-      console.log(resp.data.length);
+      //console.log(resp.data.length);
       $rootScope.numberOfPending = resp.data.length;
 
     })
@@ -43,7 +43,7 @@ function PendingEventsController ($scope, $http, $cookies, $state, $rootScope, $
 
   $scope.deleteEvent = (id) => {
     $http.delete(`${SERVER}/activities/${id}`).then(resp => {
-      console.log(resp.data);
+      //console.log(resp.data);
       $state.reload();
     })
   }

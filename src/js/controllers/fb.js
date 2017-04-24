@@ -3,10 +3,10 @@ function FBController ($cookies, $state, $stateParams, $http, $rootScope, SERVER
   let fbtoken = $stateParams.token;
   $cookies.put('access-token', fbtoken);
   $http.defaults.headers.common['access-token'] = fbtoken;
-  console.log(fbtoken);
+  //console.log(fbtoken);
 
   $http.get(`${SERVER}/me`).then(resp => {
-    console.log(resp.data);
+    //console.log(resp.data);
     let myObject = {
       firstName: resp.data.name,
       email: resp.data.email,
